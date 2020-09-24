@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+      id="stringHelper"
+      name="StringHelper"
+      point="org.eclipse.birt.core.ScriptFunctionService">
+      <Category factoryclass="my.expression.functions.StringHelperScriptFactory" name="StringHelper">
+            <Function
+                  desc="Abbreviate"
+                  isConstructor="false"
+                  isStatic="true"
+                  isVisible="true"
+                  name="Abbreviate"
+                  variableArguments="false">
+                  <Argument isOptional="false" name="String">
+                              <DataType value="String">
+</DataType>
+                  </Argument>
+                  <Argument isOptional="false" name="Lower">
+                           <DataType value="Iteger">
+                           </DataType>
+                  </Argument>
+                  <Argument isOptional="false" name="Upper">
+                           <DataType value="Integer">
+                           </DataType>
+                  </Argument>
+                  <Argument isOptional="false" name="Append">
+                           <DataType value="String">
+                           </DataType>
+                  </Argument>
+<DataType value="String">
+                  </DataType>
+               </Function>
+       </Category>
+   </extension>
+</plugin>
