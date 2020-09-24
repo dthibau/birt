@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__debut_376_0</property>
+            <property name="value">01/01/2003</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__Fin_381_1</property>
+            <property name="value">31/12/2003</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__Country_379_2</property>
+            <property name="value">France</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__City_380_3</property>
+            <property name="value">Paris</property>
+        </structure>
+        <structure>
+            <property name="name">Fin_381_4</property>
+            <property name="value">2003-12-31</property>
+        </structure>
+        <structure>
+            <property name="name">Fin_381_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">debut_376_5</property>
+            <property name="value">2003-01-01</property>
+        </structure>
+        <structure>
+            <property name="name">debut_376_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">Country_379_6</property>
+            <property name="value">France</property>
+        </structure>
+        <structure>
+            <property name="name">Country_379_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">Country_379_expr_</property>
+            <property name="value">row["COUNTRY"]</property>
+        </structure>
+        <structure>
+            <property name="name">City_380_7</property>
+            <property name="value">Paris</property>
+        </structure>
+        <structure>
+            <property name="name">City_380_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">City_380_expr_</property>
+            <property name="value">row["CITY"]</property>
+        </structure>
+    </list-property>
+</report>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__ClientId_385_0</property>
+            <property name="value">103</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__ClientName_387_1</property>
+            <property name="value">Dummy</property>
+        </structure>
+        <structure>
+            <property name="name">ClientName_387_2</property>
+            <property name="value">Dummy</property>
+        </structure>
+        <structure>
+            <property name="name">ClientName_387_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">ClientId_385_3</property>
+            <property name="value">103</property>
+        </structure>
+        <structure>
+            <property name="name">ClientId_385_type_</property>
+            <property name="value">integer</property>
+        </structure>
+    </list-property>
+</report>

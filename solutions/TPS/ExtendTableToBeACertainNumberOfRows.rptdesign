@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.6.2.r262_v20110209 Build &lt;2.6.2.v20110214-1523></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="486">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="487">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">COUNTRY</property>
+                    <text-property name="displayName">COUNTRY</text-property>
+                    <text-property name="heading">COUNTRY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CHECKNUMBER</property>
+                    <text-property name="displayName">CHECKNUMBER</text-property>
+                    <text-property name="heading">CHECKNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PAYMENTDATE</property>
+                    <text-property name="displayName">PAYMENTDATE</text-property>
+                    <text-property name="heading">PAYMENTDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AMOUNT</property>
+                    <text-property name="displayName">AMOUNT</text-property>
+                    <text-property name="heading">AMOUNT</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">COUNTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CHECKNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PAYMENTDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">AMOUNT</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">COUNTRY</property>
+                    <property name="nativeName">COUNTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CHECKNUMBER</property>
+                    <property name="nativeName">CHECKNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PAYMENTDATE</property>
+                    <property name="nativeName">PAYMENTDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">AMOUNT</property>
+                    <property name="nativeName">AMOUNT</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select CLASSICMODELS.CUSTOMERS.COUNTRY,
+CLASSICMODELS.PAYMENTS.CHECKNUMBER,
+CLASSICMODELS.PAYMENTS.PAYMENTDATE,
+CLASSICMODELS.PAYMENTS.AMOUNT
+from CLASSICMODELS.CUSTOMERS,
+CLASSICMODELS.PAYMENTS
+where CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER = CLASSICMODELS.PAYMENTS.CUSTOMERNUMBER]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COUNTRY</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHECKNUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHECKNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHECKNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PAYMENTDATE</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PAYMENTDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PAYMENTDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AMOUNT</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-header>
+                <auto-text id="482">
+                    <property name="type">page-variable</property>
+                    <property name="pageVariable">FirstRecord</property>
+                </auto-text>
+            </page-header>
+            <page-footer>
+                <auto-text id="483">
+                    <property name="type">page-variable</property>
+                    <property name="pageVariable">LastRecord</property>
+                </auto-text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="488">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">COUNTRY</property>
+                    <text-property name="displayName">COUNTRY</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["COUNTRY"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CHECKNUMBER</property>
+                    <text-property name="displayName">CHECKNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CHECKNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PAYMENTDATE</property>
+                    <text-property name="displayName">PAYMENTDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PAYMENTDATE"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">AMOUNT</property>
+                    <text-property name="displayName">AMOUNT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AMOUNT"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">CountryTotal</property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Country</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["AMOUNT"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">CountryLineCount</property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Country</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">GroupRunningCount</property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Country</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">RUNNINGCOUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                        </structure>
+                    </list-property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">29</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">le</property>
+                    <expression name="expr" type="javascript">row["CountryLineCount"]</expression>
+                    <simple-property-list name="value1">
+                        <value>30</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <column id="512"/>
+            <column id="514"/>
+            <column id="515"/>
+            <group id="516">
+                <property name="groupName">Country</property>
+                <expression name="keyExpr" type="javascript">row["COUNTRY"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["COUNTRY"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <property name="pageBreakInside">auto</property>
+                <header>
+                    <row id="517">
+                        <property name="backgroundColor">gray</property>
+                        <cell id="518">
+                            <data id="527">
+                                <property name="resultSetColumn">COUNTRY</property>
+                            </data>
+                        </cell>
+                        <cell id="520"/>
+                        <cell id="521"/>
+                    </row>
+                    <row id="528">
+                        <property name="backgroundColor">gray</property>
+                        <cell id="529">
+                            <label id="493">
+                                <text-property name="text">CHECKNUMBER</text-property>
+                            </label>
+                        </cell>
+                        <cell id="531">
+                            <label id="495">
+                                <text-property name="text">PAYMENTDATE</text-property>
+                            </label>
+                        </cell>
+                        <cell id="532">
+                            <label id="497">
+                                <text-property name="text">AMOUNT</text-property>
+                            </label>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="555">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 2){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="556">
+                            <label id="656"/>
+                        </cell>
+                        <cell id="557"/>
+                        <cell id="558"/>
+                    </row>
+                    <row id="559">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 3){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="560">
+                            <label id="657"/>
+                        </cell>
+                        <cell id="561"/>
+                        <cell id="562"/>
+                    </row>
+                    <row id="567">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 4){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="568">
+                            <label id="658"/>
+                        </cell>
+                        <cell id="569"/>
+                        <cell id="570"/>
+                    </row>
+                    <row id="547">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 5){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="548">
+                            <label id="659"/>
+                        </cell>
+                        <cell id="549"/>
+                        <cell id="550"/>
+                    </row>
+                    <row id="563">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 6){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="564">
+                            <label id="660"/>
+                        </cell>
+                        <cell id="565"/>
+                        <cell id="566"/>
+                    </row>
+                    <row id="571">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 7){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="572">
+                            <label id="661"/>
+                        </cell>
+                        <cell id="573"/>
+                        <cell id="574"/>
+                    </row>
+                    <row id="575">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 8){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="576">
+                            <label id="662"/>
+                        </cell>
+                        <cell id="577"/>
+                        <cell id="578"/>
+                    </row>
+                    <row id="603">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 9){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="604">
+                            <label id="663"/>
+                        </cell>
+                        <cell id="605"/>
+                        <cell id="606"/>
+                    </row>
+                    <row id="607">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 10){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="608">
+                            <label id="664"/>
+                        </cell>
+                        <cell id="609"/>
+                        <cell id="610"/>
+                    </row>
+                    <row id="611">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 11){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="612">
+                            <label id="665"/>
+                        </cell>
+                        <cell id="613"/>
+                        <cell id="614"/>
+                    </row>
+                    <row id="615">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 12){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="616">
+                            <label id="666"/>
+                        </cell>
+                        <cell id="617"/>
+                        <cell id="618"/>
+                    </row>
+                    <row id="619">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 13){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="620">
+                            <label id="667"/>
+                        </cell>
+                        <cell id="621"/>
+                        <cell id="622"/>
+                    </row>
+                    <row id="623">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 14){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="624">
+                            <label id="668"/>
+                        </cell>
+                        <cell id="625"/>
+                        <cell id="626"/>
+                    </row>
+                    <row id="627">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 15){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="628">
+                            <label id="669"/>
+                        </cell>
+                        <cell id="629"/>
+                        <cell id="630"/>
+                    </row>
+                    <row id="631">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 16){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="632">
+                            <label id="670"/>
+                        </cell>
+                        <cell id="633"/>
+                        <cell id="634"/>
+                    </row>
+                    <row id="635">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 17){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="636">
+                            <label id="671"/>
+                        </cell>
+                        <cell id="637"/>
+                        <cell id="638"/>
+                    </row>
+                    <row id="639">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 18){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="640">
+                            <label id="672"/>
+                        </cell>
+                        <cell id="641"/>
+                        <cell id="642"/>
+                    </row>
+                    <row id="643">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 19){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="644">
+                            <label id="673"/>
+                        </cell>
+                        <cell id="645"/>
+                        <cell id="646"/>
+                    </row>
+                    <row id="647">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 20){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="648">
+                            <label id="675"/>
+                        </cell>
+                        <cell id="649"/>
+                        <cell id="650"/>
+                    </row>
+                    <row id="651">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 21){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="652">
+                            <label id="676"/>
+                        </cell>
+                        <cell id="653"/>
+                        <cell id="654"/>
+                    </row>
+                    <row id="579">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 22){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="580">
+                            <label id="677"/>
+                        </cell>
+                        <cell id="581"/>
+                        <cell id="582"/>
+                    </row>
+                    <row id="583">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 23){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="584">
+                            <label id="674"/>
+                        </cell>
+                        <cell id="585"/>
+                        <cell id="586"/>
+                    </row>
+                    <row id="587">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 24){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="588">
+                            <label id="678"/>
+                        </cell>
+                        <cell id="589"/>
+                        <cell id="590"/>
+                    </row>
+                    <row id="595">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 25){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="596">
+                            <label id="679"/>
+                        </cell>
+                        <cell id="597"/>
+                        <cell id="598"/>
+                    </row>
+                    <row id="599">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 26){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="600">
+                            <label id="684"/>
+                        </cell>
+                        <cell id="601"/>
+                        <cell id="602"/>
+                    </row>
+                    <row id="591">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 27){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="592">
+                            <label id="683"/>
+                        </cell>
+                        <cell id="593"/>
+                        <cell id="594"/>
+                    </row>
+                    <row id="543">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 28){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="544">
+                            <label id="682"/>
+                        </cell>
+                        <cell id="545"/>
+                        <cell id="546"/>
+                    </row>
+                    <row id="539">
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 29){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="540">
+                            <label id="681"/>
+                        </cell>
+                        <cell id="541"/>
+                        <cell id="542"/>
+                    </row>
+                    <row id="535">
+                        <property name="backgroundColor">silver</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">all</property>
+                                <expression name="valueExpr" type="javascript">if (row["CountryLineCount"] &lt; 30){&#13;
+false&#13;
+}&#13;
+else{&#13;
+true&#13;
+}</expression>
+                            </structure>
+                        </list-property>
+                        <cell id="536">
+                            <label id="680"/>
+                        </cell>
+                        <cell id="537"/>
+                        <cell id="538"/>
+                    </row>
+                    <row id="522">
+                        <property name="backgroundColor">gray</property>
+                        <cell id="523"/>
+                        <cell id="525">
+                            <label id="533">
+                                <text-property name="text">Country Total</text-property>
+                            </label>
+                        </cell>
+                        <cell id="526">
+                            <data id="534">
+                                <structure name="numberFormat">
+                                    <property name="category">Currency</property>
+                                    <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                                </structure>
+                                <property name="resultSetColumn">CountryTotal</property>
+                            </data>
+                        </cell>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="498">
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <property name="fontSize">10pt</property>
+                            <expression name="testExpr" type="javascript">row["GroupRunningCount"]%2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                    <cell id="499">
+                        <data id="502">
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">CHECKNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="503">
+                        <data id="504">
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">PAYMENTDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="505">
+                        <data id="506">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">$#,##0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="whiteSpace">nowrap</property>
+                            <property name="resultSetColumn">AMOUNT</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

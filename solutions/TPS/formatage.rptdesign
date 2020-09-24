@@ -1,0 +1,2519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <property name="units">in</property>
+    <property name="theme">SampleSource.defaultTheme</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">SampleSource.rptlibrary</property>
+            <property name="namespace">SampleSource</property>
+        </structure>
+    </list-property>
+    <list-property name="cssStyleSheets">
+        <structure>
+            <property name="fileName">facture.css</property>
+            <property name="useExternalCss">false</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="18"
+ extends="SampleSource.Data Source">
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="OrderDetail" id="19">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Total</property>
+                    <expression name="expression">row["QUANTITYORDERED"]*row["PRICEEACH"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">GrandTotal</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["Total"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">CountLine</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["ORDERLINENUMBER"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ORDERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ORDERNUMBER</text-property>
+                    <text-property name="heading">ORDERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">QUANTITYORDERED</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">QUANTITYORDERED</text-property>
+                    <text-property name="heading">QUANTITYORDERED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRICEEACH</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PRICEEACH</text-property>
+                    <text-property name="heading">PRICEEACH</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ORDERLINENUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ORDERLINENUMBER</text-property>
+                    <text-property name="heading">ORDERLINENUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRODUCTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRODUCTNAME</text-property>
+                    <text-property name="heading">PRODUCTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRODUCTLINE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRODUCTLINE</text-property>
+                    <text-property name="heading">PRODUCTLINE</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ORDERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">QUANTITYORDERED</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PRICEEACH</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">ORDERLINENUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">PRODUCTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">PRODUCTLINE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Total</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">GrandTotal</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">CountLine</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ORDERNUMBER</property>
+                    <property name="nativeName">ORDERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">QUANTITYORDERED</property>
+                    <property name="nativeName">QUANTITYORDERED</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PRICEEACH</property>
+                    <property name="nativeName">PRICEEACH</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">ORDERLINENUMBER</property>
+                    <property name="nativeName">ORDERLINENUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">PRODUCTNAME</property>
+                    <property name="nativeName">PRODUCTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">PRODUCTLINE</property>
+                    <property name="nativeName">PRODUCTLINE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select CLASSICMODELS.ORDERDETAILS.ORDERNUMBER, CLASSICMODELS.ORDERDETAILS.QUANTITYORDERED, CLASSICMODELS.ORDERDETAILS.PRICEEACH, CLASSICMODELS.ORDERDETAILS.ORDERLINENUMBER,
+CLASSICMODELS.PRODUCTS.PRODUCTNAME, CLASSICMODELS.PRODUCTS.PRODUCTLINE
+from CLASSICMODELS.ORDERDETAILS, CLASSICMODELS.PRODUCTS
+where CLASSICMODELS.ORDERDETAILS.PRODUCTCODE = CLASSICMODELS.PRODUCTS.PRODUCTCODE
+and CLASSICMODELS.ORDERDETAILS.ORDERNUMBER = 10100
+order by CLASSICMODELS.ORDERDETAILS.ORDERLINENUMBER]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>QUANTITYORDERED</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>QUANTITYORDERED</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>QUANTITYORDERED</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRICEEACH</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRICEEACH</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRICEEACH</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERLINENUMBER</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>5</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERLINENUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERLINENUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTNAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>70</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRODUCTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>70</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTLINE</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRODUCTLINE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTLINE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Customer" id="20">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">NOM_COMPLET</property>
+                    <expression name="expression">row["CONTACTFIRSTNAME"] + " " + row["CONTACTLASTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CONTACTFIRSTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTACTFIRSTNAME</text-property>
+                    <text-property name="heading">CONTACTFIRSTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACTLASTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTACTLASTNAME</text-property>
+                    <text-property name="heading">CONTACTLASTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTOMERNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <text-property name="heading">CUSTOMERNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ADDRESSLINE1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ADDRESSLINE1</text-property>
+                    <text-property name="heading">ADDRESSLINE1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ADDRESSLINE2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ADDRESSLINE2</text-property>
+                    <text-property name="heading">ADDRESSLINE2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CITY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CITY</text-property>
+                    <text-property name="heading">CITY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">STATE</text-property>
+                    <text-property name="heading">STATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">POSTALCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">POSTALCODE</text-property>
+                    <text-property name="heading">POSTALCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COUNTRY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">COUNTRY</text-property>
+                    <text-property name="heading">COUNTRY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ORDERDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ORDERDATE</text-property>
+                    <text-property name="heading">ORDERDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REQUIREDDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REQUIREDDATE</text-property>
+                    <text-property name="heading">REQUIREDDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SHIPPEDDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SHIPPEDDATE</text-property>
+                    <text-property name="heading">SHIPPEDDATE</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CONTACTFIRSTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CONTACTLASTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">ADDRESSLINE1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ADDRESSLINE2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CITY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">STATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">POSTALCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">COUNTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">ORDERDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">REQUIREDDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">SHIPPEDDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">NOM_COMPLET</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CONTACTFIRSTNAME</property>
+                    <property name="nativeName">CONTACTFIRSTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CONTACTLASTNAME</property>
+                    <property name="nativeName">CONTACTLASTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">ADDRESSLINE1</property>
+                    <property name="nativeName">ADDRESSLINE1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ADDRESSLINE2</property>
+                    <property name="nativeName">ADDRESSLINE2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">CITY</property>
+                    <property name="nativeName">CITY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">STATE</property>
+                    <property name="nativeName">STATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">POSTALCODE</property>
+                    <property name="nativeName">POSTALCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">COUNTRY</property>
+                    <property name="nativeName">COUNTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">ORDERDATE</property>
+                    <property name="nativeName">ORDERDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">REQUIREDDATE</property>
+                    <property name="nativeName">REQUIREDDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">SHIPPEDDATE</property>
+                    <property name="nativeName">SHIPPEDDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select CLASSICMODELS.CUSTOMERS.CONTACTFIRSTNAME, CLASSICMODELS.CUSTOMERS.CONTACTLASTNAME,CLASSICMODELS.CUSTOMERS.CUSTOMERNAME,
+CLASSICMODELS.CUSTOMERS.ADDRESSLINE1, CLASSICMODELS.CUSTOMERS.ADDRESSLINE2, CLASSICMODELS.CUSTOMERS.CITY,
+CLASSICMODELS.CUSTOMERS.STATE,CLASSICMODELS.CUSTOMERS.POSTALCODE,CLASSICMODELS.CUSTOMERS.COUNTRY,
+CLASSICMODELS.ORDERS.ORDERDATE,CLASSICMODELS.ORDERS.REQUIREDDATE,CLASSICMODELS.ORDERS.SHIPPEDDATE
+from CLASSICMODELS.ORDERS, CLASSICMODELS.CUSTOMERS
+where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER
+and CLASSICMODELS.ORDERS.ORDERNUMBER=10100]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACTFIRSTNAME</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACTFIRSTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACTFIRSTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACTLASTNAME</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACTLASTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACTLASTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNAME</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ADDRESSLINE1</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ADDRESSLINE1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ADDRESSLINE1</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ADDRESSLINE2</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ADDRESSLINE2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ADDRESSLINE2</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CITY</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CITY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CITY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STATE</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>POSTALCODE</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>POSTALCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>POSTALCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COUNTRY</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERDATE</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>REQUIREDDATE</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>REQUIREDDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>REQUIREDDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SHIPPEDDATE</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SHIPPEDDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SHIPPEDDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+            <property name="color">#000000</property>
+        </style>
+        <style name="default" id="189">
+            <property name="color">#808080</property>
+            <property name="textLineThrough">none</property>
+        </style>
+        <style name="adresse" id="190">
+            <property name="fontSize">smaller</property>
+            <property name="fontStyle">italic</property>
+            <property name="color">#808080</property>
+        </style>
+        <style name="label-champ" id="191">
+            <property name="fontWeight">bold</property>
+            <property name="color">#808080</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <grid id="7">
+            <property name="width">7.927083333333333in</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Date</property>
+                    <expression name="expression" type="javascript">new Date()</expression>
+                    <property name="dataType">date-time</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="8">
+                <property name="width">3.3333333333333335in</property>
+            </column>
+            <column id="188">
+                <property name="width">1.0104166666666667in</property>
+            </column>
+            <column id="9">
+                <property name="width">3.5833333333333335in</property>
+            </column>
+            <row id="10">
+                <cell id="11">
+                    <property name="backgroundColor">#3A435F</property>
+                    <image id="13">
+                        <property name="height">1.1388888888888888in</property>
+                        <property name="width">3.1666666666666665in</property>
+                        <property name="source">embed</property>
+                        <property name="imageName">plb.png</property>
+                    </image>
+                </cell>
+                <cell id="186"/>
+                <cell id="12">
+                    <label id="70">
+                        <property name="style">label-facture</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <property name="textTransform">capitalize</property>
+                        <text-property name="text">FACTURE</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="54">
+                <cell id="55">
+                    <text id="16">
+                        <property name="style">adresse</property>
+                        <property name="marginTop">5pt</property>
+                        <property name="marginLeft">10pt</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[22-24 rue du Président Wilson</br>
+92300 Levallois-Perret</br>
+33 (0)1 43 34 90 94</br>
+33 (0)1 43 34 90 95
+]]></text-property>
+                    </text>
+                </cell>
+                <cell id="187"/>
+                <cell id="56">
+                    <grid id="57">
+                        <property name="width">6.875in</property>
+                        <property name="dataSet">OrderDetail</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ORDERNUMBER</property>
+                                <text-property name="displayName">ORDERNUMBER</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">QUANTITYORDERED</property>
+                                <text-property name="displayName">QUANTITYORDERED</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["QUANTITYORDERED"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PRICEEACH</property>
+                                <text-property name="displayName">PRICEEACH</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRICEEACH"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ORDERLINENUMBER</property>
+                                <text-property name="displayName">ORDERLINENUMBER</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ORDERLINENUMBER"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PRODUCTNAME</property>
+                                <text-property name="displayName">PRODUCTNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRODUCTNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PRODUCTLINE</property>
+                                <text-property name="displayName">PRODUCTLINE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRODUCTLINE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Date</property>
+                                <expression name="expression" type="javascript">new Date()</expression>
+                                <property name="dataType">date</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <column id="58">
+                            <property name="width">1.5625in</property>
+                        </column>
+                        <column id="59"/>
+                        <row id="60">
+                            <cell id="61">
+                                <label id="71">
+                                    <property name="style">label-champ</property>
+                                    <property name="fontWeight">bold</property>
+                                    <text-property name="text">Date</text-property>
+                                </label>
+                            </cell>
+                            <cell id="62">
+                                <data id="74">
+                                    <property name="style">default</property>
+                                    <property name="resultSetColumn">Date</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="63">
+                            <cell id="64">
+                                <label id="72">
+                                    <property name="style">label-champ</property>
+                                    <property name="fontWeight">bold</property>
+                                    <text-property name="text">N° de commande</text-property>
+                                </label>
+                            </cell>
+                            <cell id="65">
+                                <data id="69">
+                                    <property name="style">default</property>
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="resultSetColumn">ORDERNUMBER</property>
+                                </data>
+                            </cell>
+                        </row>
+                        <row id="66">
+                            <cell id="67">
+                                <label id="73">
+                                    <property name="style">label-champ</property>
+                                    <property name="fontWeight">bold</property>
+                                    <text-property name="text">Description</text-property>
+                                </label>
+                            </cell>
+                            <cell id="68">
+                                <label id="75">
+                                    <property name="style">default</property>
+                                    <text-property name="text">Achats de produits</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+        <grid id="37">
+            <property name="marginTop">20pt</property>
+            <column id="38"/>
+            <column id="39"/>
+            <row id="40">
+                <cell id="41">
+                    <property name="verticalAlign">middle</property>
+                    <text id="43">
+                        <property name="style">default</property>
+                        <property name="textAlign">center</property>
+                        <property name="dataSet">Customer</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CONTACTFIRSTNAME</property>
+                                <text-property name="displayName">CONTACTFIRSTNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTACTFIRSTNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CONTACTLASTNAME</property>
+                                <text-property name="displayName">CONTACTLASTNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTACTLASTNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CUSTOMERNAME</property>
+                                <text-property name="displayName">CUSTOMERNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ADDRESSLINE1</property>
+                                <text-property name="displayName">ADDRESSLINE1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ADDRESSLINE1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ADDRESSLINE2</property>
+                                <text-property name="displayName">ADDRESSLINE2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ADDRESSLINE2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CITY</property>
+                                <text-property name="displayName">CITY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CITY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">STATE</property>
+                                <text-property name="displayName">STATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["STATE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">POSTALCODE</property>
+                                <text-property name="displayName">POSTALCODE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["POSTALCODE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">COUNTRY</property>
+                                <text-property name="displayName">COUNTRY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["COUNTRY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ORDERDATE</property>
+                                <text-property name="displayName">ORDERDATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">REQUIREDDATE</property>
+                                <text-property name="displayName">REQUIREDDATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["REQUIREDDATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">SHIPPEDDATE</property>
+                                <text-property name="displayName">SHIPPEDDATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["SHIPPEDDATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">NOM_COMPLET</property>
+                                <text-property name="displayName">NOM_COMPLET</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NOM_COMPLET"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[A l'attention de <VALUE-OF>row["NOM_COMPLET"]</VALUE-OF>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="42">
+                    <property name="style">adresse</property>
+                    <list id="46">
+                        <property name="dataSet">Customer</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">CONTACTFIRSTNAME</property>
+                                <text-property name="displayName">CONTACTFIRSTNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTACTFIRSTNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CONTACTLASTNAME</property>
+                                <text-property name="displayName">CONTACTLASTNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CONTACTLASTNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CUSTOMERNAME</property>
+                                <text-property name="displayName">CUSTOMERNAME</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ADDRESSLINE1</property>
+                                <text-property name="displayName">ADDRESSLINE1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ADDRESSLINE1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ADDRESSLINE2</property>
+                                <text-property name="displayName">ADDRESSLINE2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ADDRESSLINE2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CITY</property>
+                                <text-property name="displayName">CITY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CITY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">STATE</property>
+                                <text-property name="displayName">STATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["STATE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">POSTALCODE</property>
+                                <text-property name="displayName">POSTALCODE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["POSTALCODE"] + " " + dataSetRow["CITY"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">COUNTRY</property>
+                                <text-property name="displayName">COUNTRY</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["COUNTRY"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">ORDERDATE</property>
+                                <text-property name="displayName">ORDERDATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ORDERDATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">REQUIREDDATE</property>
+                                <text-property name="displayName">REQUIREDDATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["REQUIREDDATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">SHIPPEDDATE</property>
+                                <text-property name="displayName">SHIPPEDDATE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["SHIPPEDDATE"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">NOM_COMPLET</property>
+                                <text-property name="displayName">NOM_COMPLET</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NOM_COMPLET"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <header>
+                            <data id="48">
+                                <property name="fontSize">14pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">gray</property>
+                                <property name="resultSetColumn">CUSTOMERNAME</property>
+                            </data>
+                        </header>
+                        <detail>
+                            <data id="49">
+                                <property name="style">adresse</property>
+                                <property name="fontFamily">"Bitstream Charter"</property>
+                                <property name="resultSetColumn">ADDRESSLINE1</property>
+                            </data>
+                            <data id="50">
+                                <property name="style">adresse</property>
+                                <property name="fontFamily">"Bitstream Charter"</property>
+                                <list-property name="visibility">
+                                    <structure>
+                                        <property name="format">all</property>
+                                        <expression name="valueExpr" type="javascript">row["ADDRESSLINE2"] == null || row["ADDRESSLINE2"].length == 0</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">ADDRESSLINE2</property>
+                            </data>
+                            <data id="51">
+                                <property name="style">adresse</property>
+                                <property name="fontFamily">"Bitstream Charter"</property>
+                                <property name="resultSetColumn">POSTALCODE</property>
+                            </data>
+                            <data id="52">
+                                <property name="style">adresse</property>
+                                <property name="fontFamily">"Bitstream Charter"</property>
+                                <property name="resultSetColumn">COUNTRY</property>
+                            </data>
+                        </detail>
+                    </list>
+                </cell>
+            </row>
+        </grid>
+        <table id="76">
+            <property name="marginTop">50pt</property>
+            <property name="marginLeft">10pt</property>
+            <property name="width">8cm</property>
+            <property name="dataSet">OrderDetail</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ORDERNUMBER</property>
+                    <text-property name="displayName">ORDERNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">QUANTITYORDERED</property>
+                    <text-property name="displayName">QUANTITYORDERED</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["QUANTITYORDERED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PRICEEACH</property>
+                    <text-property name="displayName">PRICEEACH</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRICEEACH"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERLINENUMBER</property>
+                    <text-property name="displayName">ORDERLINENUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ORDERLINENUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTNAME</property>
+                    <text-property name="displayName">PRODUCTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTNAME"] + "/" + dataSetRow["PRODUCTLINE"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTLINE</property>
+                    <text-property name="displayName">PRODUCTLINE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTLINE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total</property>
+                    <text-property name="displayName">Total</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">GrandTotal</property>
+                    <text-property name="displayName">GrandTotal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["GrandTotal"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">CountLine</property>
+                    <text-property name="displayName">CountLine</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CountLine"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">RowNum</property>
+                    <expression name="expression" type="javascript">row.__rownum</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Mod</property>
+                    <expression name="expression" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Mod2</property>
+                    <expression name="expression" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="92">
+                <property name="width">3.6875in</property>
+            </column>
+            <column id="93">
+                <property name="width">1.1145833333333333in</property>
+            </column>
+            <column id="94">
+                <property name="width">1.1770833333333333in</property>
+            </column>
+            <column id="95">
+                <property name="width">1.7395833333333333in</property>
+            </column>
+            <header>
+                <row id="148">
+                    <property name="style">table-entete</property>
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <cell id="149">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="164">
+                            <text-property name="text">Nom produit</text-property>
+                        </label>
+                    </cell>
+                    <cell id="150">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="165">
+                            <text-property name="text">Quantité</text-property>
+                        </label>
+                    </cell>
+                    <cell id="151">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="166">
+                            <text-property name="text">Prix unitaire</text-property>
+                        </label>
+                    </cell>
+                    <cell id="152">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <label id="167">
+                            <text-property name="text">Montant</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="82">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">row.__rownum%2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0.0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">row.__rownum%2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1.0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                    </list-property>
+                    <cell id="83">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="101">
+                            <property name="resultSetColumn">PRODUCTNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="84">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="97">
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">QUANTITYORDERED</property>
+                        </data>
+                    </cell>
+                    <cell id="85">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="99">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00 €{RoundingMode=HALF_DOWN}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">PRICEEACH</property>
+                        </data>
+                    </cell>
+                    <cell id="86">
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <data id="103">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0.000 €{RoundingMode=HALF_EVEN}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">Total</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="274">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">row.__rownum>=7</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="275">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="276">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="277">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="278">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="269">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">if (row["CountLine"]&lt; 7){
+false
+}
+else{
+true
+}</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="270">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="271">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="272">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="273">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="264">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">if (row["CountLine"]&lt; 6){
+false
+}
+else{
+true
+}</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="265">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="266">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="267">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="268">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="259">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">if (row["CountLine"]&lt; 5){
+false
+}
+else{
+true
+}</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="260">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="261">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="262">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="263">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="254">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">if (row["CountLine"]&lt; 4){
+false
+}
+else{
+true
+}</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="255">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="256">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="257">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="258">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="249">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">if (row["CountLine"]&lt; 3){
+false
+}
+else{
+true
+}</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="250">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="251">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="252">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="253">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="234">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">row["CountLine"] >= 2</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="235">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="236">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="237">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="238">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="239">
+                    <property name="height">24px</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-impair</property>
+                        </structure>
+                        <structure>
+                            <property name="operator">eq</property>
+                            <expression name="testExpr" type="javascript">BirtMath.mod(row.__rownum,2)</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">1</value>
+                            </simple-property-list>
+                            <property name="style">detail-row-pair</property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">row.__rownum >=0</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="240">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="241">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="242">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="243">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+                <row id="177">
+                    <cell id="178"/>
+                    <cell id="179"/>
+                    <cell id="180">
+                        <label id="182">
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">right</property>
+                            <text-property name="text">TOTAL</text-property>
+                        </label>
+                    </cell>
+                    <cell id="181">
+                        <property name="style">table-entete</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="184">
+                            <property name="fontWeight">bold</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0.000 €{RoundingMode=HALF_EVEN}</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">GrandTotal</property>
+                        </data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <text-data id="185">
+            <property name="style">default</property>
+            <property name="fontSize">12pt</property>
+            <property name="marginTop">20pt</property>
+            <property name="marginLeft">20pt</property>
+            <structure name="toc"/>
+            <expression name="valueExpr" type="javascript">"Veuillez remplir tous les chèques à l'ordre de PLB Consultant&lt;br/>"  +
+"Pour toute question concernant la facture, veuillez contacter ...." + "&lt;br/>&lt;br/>&lt;br/>"+
+"&lt;center>Merci de votre confiance&lt;/center>"</expression>
+            <property name="contentType">html</property>
+        </text-data>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">plb.png</property>
+            <property name="type">image/png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAAOQAAABSCAYAAAEzw0hzAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/
+                oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wBBA8AA4l/3pQAACAASURBVHja7L13fJRV
+                9j/+vvcpU5NMekKAhFCCKL1YF1DELrB2XQuWdXXXgl1XF7Hs4trdXduuBXvbVVCxIgQBUSEYek8hvU+m
+                P+3e3x8zk0wmMyEz4YP+Xl/v6zWv5Hme2889555z7rnnkLtfXjY/V3YPAwAOYLi9/XgAFKEkEGPwkAnz
+                yyiICACKyv1TRqVfDgBbq5zvgyBtbKHj1HD+bQc6t3LGd4Ue+dgixwWISmTrlrUf+/Y9e/ZRpz+L7V/d
+                glHH/hlVm54BFe0AAJ8krT56+sMzAKC62YfCHGuwICGEc85Vg8MkUhKukHPOezVCCOnxoqWlci2PSpu/
+                uJUzZvAd3z7MwxWFK4v+/+9L95waWV/kd5/OVsXqhLjqm3f1IzI74HHug9UxEobmgmzNxvovHsAn+4Ze
+                E5F3U2TBumbfmwBw17xRXyJG2l7j/tEikKk76zxv9Br5J8ueXTnEsvfE8bOfAgBsXXUfKKVQVR0TZ/8t
+                Vn2oAFAMDoD0mrr+TC81DI1QIQi/yNwC1fHVJ4+hssWvhQuG03BCCEAQLx23eFsKIYT4Aqzr3d5VC/h/
+                XrzODABihS9zB6gAvuq+maJsBaAj4HNDlu0osjViWLZFQj9TmzvwHgCs//NYDwBYzV1IAL8hY3KxyQ+A
+                0FsvvexP721wPk6YhkBnLTS/C7LZDnvOkWDdmBM3KZrRpGhGk1fVeLrddAEAvFpaM9PtU1QA4Abwt38/
+                kj7u5EfJpNl/JwjjY2GKfwsASKYUSKYUgAGe5u34dg/9bdSs9wAfAC6LNFsWafbu+s4FBGAA+PwZg1fa
+                LbL43FeVl1ORkD9fe3cHfjGJc14V+jshEtdi5OOc8yrO+RLOuTMSv0Pfl3DOS0PfqkKflvRYzU+98eYD
+                4YcMk3+IQ/IXRWaY+9ubTtpa5fwgnH/d/s53r5tV+N8Nezv+ZZZI7tgix/mR+bdWOf8bBkl9R6Dp1Il5
+                N/RocM+Pz3JRlCGYMuFu2YlBI09H7c53u0DmG3r3Y0ePzLijts2PwZmWHsAkMfDvoDjKYyRNCXBXy16+
+                ffXDPHqKo/PGmvZYpLCLIJR/fSM2fXkjdq59COVf3gIA2LlmIVKzR5LOgJrQWnC6lR8AYFu1a324oV4U
+                yJZSjJzBx+OIE/4CDqObtNW2bDn2lAdiEu5eu0QopdnlaQCQl246JvzuqeVVhT0abG/ciPwRZwfnWu8m
+                Udrev46dtfCTtEg4hFMXGav13RKr4axUU1e+BWcUVq1d/lDn2s8XcQAQK/mx69PKXzxWFtNABBF124ML
+                RjFkrHxojgsPcgBoiazwhc8rbgaAUUNsT/djpo00U6fIQfDTiruC8Ny84k5etvw6Xrb8el72+fVcUVy8
+                ds8yHm/Vcda1ZjaFSV3ktK8/wO+NBMHOlbd31UHCDfYGCkHxsX+DzUo5IYRGrUQDPbcRRggROecsChsI
+                flEpghxVRZA7HkX+5kegYVGYdEWTMs55aRTezg9yAx/9a2VhyoETw9NICAEHBzgD5xTBySRAj9nqTjLV
+                tdEnPSnHo7+xKI7Lq/IUqxSfGTsI5YpODc4ABqVb4tYhHnPCmXJWVtFBZ/zHD6+AKJtgGAoE2QxBsIFz
+                gu/ryCzd0Dvikc9oakcIIZED5MB3/YX6zL+tSV9973QnAKiqwSUpuJzzHeY+y1FKLWiu/BobP5mPlgPr
+                gpyJtxWbPr0WB7a83p1RECBZHLCl5MAkp4NQEWZJx/yrn1gjUMHRxdWoeixeoSttq24f3KMDhBwfr3Pf
+                VbQcF/kcHiAAhAcIAP/8ZP/oPlfQso/+sWpYSu1MAPC274Ea6EBazkT4XNWwpY8EESSMPfFhbF+9EExX
+                4NXMGDb19k3ZGbZJG3e37W5x6xeeOTW/PFzho19WfXfXacOOB4CAxrhJJD0gXNep8EGpcoh0AVSIv1SZ
+                wTihfRORbfs6Bo0dmdHQZ6bW9rZyzjnfVrqw16Zc9skf+JaVQRK5rfQvfMuKO/nmr+/kHbx26p66Tg/v
+                Z/pmc9O1sTbzVpfSJ5cXQb85N9jlsWSeYGIcAL776t4vYuLk2tVvtw6z1wAEWP/fuTj2vGXdRMWagYC7
+                FgAQcNVCtmaDEKDmm3/8SAgDKXic9MA5xkEF2m/6/dePt+XEZSZUY0jkbkEE+nrkd79iwGISeiAE4bBu
+                WXFniDIDEtGxp0F7uauaJf++4qGJw7LvUxUXbKlDEXDXdO9JHKCiGVSUI8QiDUee9FSPQb7wZfUD159W
+                tKgPSqkBEPtDVZ1+laeZY1PgS57dZH3rjxO90d92fHMbN5gAu6hh2IlPkR67cjjF3p0jqYSArMHTIVoc
+                2PhT6c7Tz777JQBP9KfT/d0OdJ0ZkiSI/ckb2eZ1f32SvHDvrRy/pm7BiEdwIEWc8wURiF7KOZ8ZQ6Ba
+                FPE9so4wB7IkilhE1rEoilspjejPzIh+lEa0tzSC+6mKyFfKOX86ehWQZ958fTHjtJeIoRiS98i0xtNY
+                HyoHDqIv3c4v/v25v/sy1SJURe+JhHL+U6V702Uzhj7SQyFT7fwf42AAiMtvlB5/ROa/4rWxtdr5Hnhv
+                TYFAiLC0vOW5P88dseKgS3rbyts44xLAAQ4GwgFQCgICzowYmBsJeWD87EdJv3CNMUiCQKJxs+S21cP3
+                PDmzIlaZ/Ou/lOqfO0XtL17GJyViKoaOvwy5R/wWTPGBMxVZQ49H8aQ/wGzLh7ezGimZ42IWTpV9Md/v
+                bfT03qsoxbZqV3ZlY8vQyPfxBggAXz5wyrX9RLOP+pyE/kChqWoVGnZ/Ai3QCoBCtmUCjINQjvGzn46u
+                401CyGUA0NqpejNTJWvX3gY84erUhuemSfP6xZwzvgMERxyMJ45sMyYk+zNTlFogyHZMmfsapsxdAlGy
+                QLZkQLJk98p7zb82PBz+/9OyujMiv238Yf9yq0zn9ZcQaowd0c9t5LI++19Z/mrXw65vH0LrgbUIeILi
+                eN3OZShbdiU4dHAjgG0r7sbOlbfD0FRoigu1ThzYtK/1nsgKX75x2u7w/7PG5VzRg+Gu19emWIR+U3tJ
+                6AGDr7uW8eaGsxLZNcjWr2/kis8DCCJEMQX5I85E/e4PgiKVlAJNcUIPuGDPGgVKDBw16wkCAOtX/GXb
+                mIKdS6Th7/3FItHUWEtK0RmXhZ4MeuQyq271a0XZVrk/zENTh1Lb5lEbdA7/uKEp0/tLdABAJIIM2ZYN
+                rgfg7ayA4mtGwNUIJlCkWLOhKwCV7D0YJM4513RAErkKkNRYFf/hP5tGRQ4wVmpxBa7tLzRy002Dc9NN
+                PcQ0t6r1S40rqu4mMGqByZyGYy8IEqkhYy9C9dZ34Gre3FMvxLqXjyQGt9leuiODc0r7R+anDs9Y0gcU
+                e5F0gzMIEXqfFFlKDwvifeLk+DOew+Sz/g3ZntvjQ+HYi4GosuHH8v0tX8TTp/ceIO8a4OZ6/mR/IVfZ
+                4P1bpNhNCCEiFQghhDS2BXpI5gue3jj0yAXv5cbFye2r7uBKwAOLtQCjp98bAREFO0rvh+JphK6rsDmG
+                gAOwCCoCqox2kr1n5il3lETizdK1da/99jeD58drzB/QNLNJ7J8U4tV4mlXs4joIpX1prT8ghFyw7Ztb
+                uQQDdU7p7yed+/jd3SdMjEEQU+D11PQAztq3zgbAUTzlJhxz7tsAoSAAAoYMCICDtI069Yl1PRrua4AA
+                YDYJYkydSCxdsbUrK7x+o8+83x7Al0ECw6FwEzJT6V3bVtzGy768J6ji3dU5dCNA2LgUZdqO7/6GnMLp
+                aDmwFoOOmIOAqwb7Nz2LhoriXto6e55v6SfTp96SmAjQPScdbqXfpWxW8bPI5yc/3XNM5POMQvIyAKi8
+                W/5MFVU0cOvrACBecM7NUwFg36obueJrB9M0BDoqENRFEoiCDNVTB1G2dfEOnAML/zd18fN38NWSnJzE
+                k5FierG/eZ//bH8P1u/m04avj86zYtltv+MMoATY1mn/8yXnPbq4F8djcAmECmjc+yk4EcFBwUHAQRDw
+                tiJ72CnIH3kOxp60GJxpeHvRZT+mWqUuXaBqGAkN0uXT/hDWu4d/qm40zLp/nT0676c727Kf/2L/As75
+                m5xzTiOYhDBeFzm0NzfW0ovHnvwoueS8hYt7bCHhfwKGDEIYiCBCElJ6ch6mFDRXfA1NcSJr6NGgYekk
+                YvkFVNbnoP69zjW3B3Mf1L320vF888Dxnv+trXsq8t3y26ZdCODC6Lwfb6p/PPz/iBn/IAdFkvKv7uaU
+                soPx+yCCCJH5cMSsZ0jE4QRr0vBEnkzuik8tlQNpVnlwP6QmwjlXAEgx9LcEwfNdGn1Q8mv6f02/s4hz
+                XhTxXB7Wq0SdZyyK0L9E/v90ZB2hd86IOqri1BGpu+mho4kouyTcHue8PEoHVBqRr8f/cTn+0OC6lEzh
+                46+ovOWRHY9UXsWoo5RzPiH0PnoS54etEmKpLMNKr4j/q2Ic+c2PsjRaEnrXlZd8tuzpTSPSKiYaTEgM
+                8qBgA9RyGiCQBB1jZj5NACCg6NwkC0nXxwwGV4BVpdulYb0Uc5qhyiKNaaqzfmfrZceNyX4zSQwY0Cxo
+                OoNisO9TzNKxA6mHuvwBn6YRqAqDx+WExkzw+dwIKAwKk+FytUJjMnyKCp/fDx0WuFztUDUNum7A720H
+                iBl+fzs0NQDGRDAu9ONHYYWK9kBGJwDc+tq2uQMBYlApR+GwiUUxjT4o4tpbJQtEVTWOODgTfhDlh0hh
+                N4nHcM74Ax/U/ybpsZ951g1EtOQje9h0TJn7ClqqVmHSmf9B3uizYAQ8mDb3dWiqGyOnLcDYmX9HW/Ua
+                TJu7BNb0YUjLmYgpZ7+CxsqvMOXMVzB43FVQvE39HBuBQUT42e5FAPDE5UfeEC+nW9FqSVRqaPeXHayF
+                A35+FQB8+EPDwyKNzTm0dCqeZCfPJ9GF8VTSz3xVVXvMS/srbtqCyj9sQOUdKzq2HGw+Fp6X/6ekV0Qs
+                a9Bkk9ddz5srvuZNe5dzTfNwXfNxXfdzw1C5z1PP26rX8rba9byt9jveUrOetx1Yw2F5hACAqulx6/3H
+                J3tjAnlbpfMYzhmLV26rly8EAJ2ztj66fVuyc+dRY/dZ74Pc+hT2XcxCjPGHP664KNm+iIfyMM/TUYH6
+                Hcsg2dJRu+sjGLoa1CZQgBATrCkFQfPMkIDHOQD/A3zek6WjJVGIuxvfdPbImIdBnQGNgxMSEyk4cJSF
+                vfLZdwcEzTAyhG6FRI90+T83LUt2vOY4fXa6lPa45Fhnx1pibSGEOO+bU/xu0qSVc1Ngz/eP4sC2d4Jq
+                nbdPhaopqN39CTZ9HsT0xv1fw+usgKdtN9a/H9Rb71r3BCrLXgYArH59VnDuAh4wqGC6AsmSDntqDphp
+                KMwO+VFrtl2H4YSuB2AwL6juhmrxvgYAH90yI66RXLsvvhw+enDq93EPFQlAqFBrSjXdbo4DxJZOBW/c
+                NHlfMhO3qdr9cjyNcmaq6ek4jA1Ps/YGYk2r5xVCSPpAkIgsW/rPVcNTq2YyJoT0IAygAkTJDsCApvhR
+                MGoOOps3Q/W3g8MAgQgtbJcimKB0HsCUuUvww4dXwJ5ZCKYH1VOUMPh1E6ae+leyfueBXVNG579w7gtN
+                z318/WC1J7kxuEWOvYc1tAV+GpRlmRT9/osNjRefOiX37XgDW1He/N/ZE3PP1w1jj0DpyHiqCkLIH34O
+                bvXVVdW46qSiQ2bjKCLcHxKidYRCNqWg5Lh7eq6yIcf0XJGfXgvJmhnSUYbHxHopVVjoTCHTbg2IEJ9a
+                dl3BU7iOR+j8OQRCOOJwDUQgR3LOL9vbGJghmWlxkUM6noHIfSk9DrSq38+emHs+AHh8xsg0O41Je7/e
+                7Xw5mUn775raHM45BmJreuWJhbgybB3rwh1j0sjjA+PYBcpT8yZi7EmLMXbWI9BVL3S/Bwd2vhe3UO2u
+                /4KIFuAgi9LgFGYxiJ2ZGYYeK0/IpC7ujOQ5TDKA10fmma8ucsgnom8gckIIKcw2HQsAiz7ceUmaPbbU
+                4fExnDI648dkJm34iIyb4gGxql1/I5rDfre0blZTh+KMV98RqXhsoBhOm5oqtfqtb8PVvAs1W94E1/0I
+                BFqxd93iuIU2f3E7TKYUcLCDKA0Ak6DhudefOXfSbd8eFzm4q57dLXxW1jBI13h9L1TuJl/wKgYUnUPR
+                OXyqEdprDNS2+xqrWn1vrypvmxFRbQ8Y3//b0VfF65vJKqxLdtLG5VlujTfeNk38d/T7i08cvDIvw5ze
+                58ki4yivdD4UftxduoBv/+Z2/lPpXbteWPKXmQclrVlZhbI9Daje8kpQQLVkgkoWzDhlfdxCp924H+Vf
+                /BGyJR0gBEqISePcgM6UrhMHAkBhEo7Pr/vvx+fWAefeCQIOgXIcOWs0eRVo8GvaIBGxmZE3q8iwy4vF
+                qqS1JpoxS5Jic5aP/m930qRMCzCLyUxj6uen5JG1fXL2iga7SYrFtSLXYe6yj2kPpK53SO5jqU5Lji1Q
+                Vm39+nYQQiEIHIqByhtWnj537d9O2toFSImyNDPVofHggDkFJFM6RMkStzOCIAC6DoBAcdVgzAmLAADH
+                nPs2ypZeDTk1p+t8L5pwmogGj2HbDwAPvrNrulmMDUTVYLi8WEgaiBc9XzY1HhCZwXHfeaOXJlPv26sq
+                /xgLiADg8et7DlbeJolxuexnv+24o2tbMugwyARh7iF46gYwgwAcw16Y9fkWMus2WAQF7Uxr6o3ql3aK
+                W654UNNUHwgIVKUDhWOuREdbGTR3K0AMMGZAMmcA4dtGREDA2wAqWiCKVoDrMbc9zgFKOOzC7tuGnfjx
+                kx2KscIh01kxRQOX8nlOmvmMAZwCfAQgpjFUXZu/cXCWNT/JessATIpNWMljhJA745VtcyqfZqTJZ8b5
+                /DUh5JTww9av7+AMHIRQcB7cexySHx5dRIXP9tzcOQ//qSfX2ouepenSlbeBm1IAzmESTehoLUN67ngY
+                WXo8Ag+mjcWQI8+Fu30fKjY9C9XbClFKAxVE6JoXomAFkS0QqYZhJ378JAA4ZDIr3qD/t6Xh3gFy5HPi
+                fVhfo8xPWi0XYJOsMTGSYOrCtTE5q3WV/NTjivBFH7xEA40A4prPHjQAFyRqQGMEGxqyr7rm8jtf7Vv8
+                iEovPnf1tQIMAAIIIRAECXqgAy3VpQcdpLPxRxBiAiUWeNr3ICVzDCae0d3+hqWXol0OWh0t/75+Nnjs
+                i8megIHrfzPsp2Qn+7WPduagD3PI8yY4vugvk6ipgGwKMil3f7DzVKs5Ps+84cETFuDBoG13f9Pafe2X
+                /GZk5jvh508+fowbni0njL3gjYSYsV7T+PnrF5w1uGDwJ4yLGJi0ygFQBNx1IFSCYfhhTR0Gk1b3WMnp
+                r99Z1xnYNSjVVBJPnieEzB4AWX0GwI19iTX9Tet3t/9w3OjMYwDAYPxHSjB1oHUGFB1bW9Q504bYPsGv
+                6df0a/p/KUUcsDhCf51R7xeE/s6LyLco2vlJ1Pce9YT+Ph3RZnmM7wfrx4TI76FvpVHfIsuH35VH1DMh
+                ZGPijPoWWd4Zx8NBZLvOyFvUkeOLeHbEchIT8d4Ro+8TQneYFkSW55zP6w8QZ0Z1tio02PmhDs8LVVwV
+                eo62aemybYlRT3l4IcSYlAVRA5kZp/z80ODCxkJLQs9VB+lHecQFstKoupfGU4yHxxu16EpD/V0QZb/T
+                Y3wxABdeNOV91Rc1N87oRd6D2Xn6zTceZJzw/nIFlIAGDNEzJq1pDuNUGYipg4kaYptiVn93wfUn3/za
+                lpNvO634vk6/3twfJoUDXBQI3dPg3dzp1eQrTiz8S7y8H65tlYcV0C0CoeUkyKmHO61zoHhckePoZPpf
+                tq99kCTQNwhBWz8ZK8LBuUAp+2Z7W/lNpxcvPlQUlOz65paQj5DEChqgAzJXIQBsooJNnUUfnjPn9nN3
+                VTsXlwxNu3ugA1qx23nt7NHp/+lxWrG6dta50wti3jbkBkDF5I4xtrn5nUfa8feB9vnBN7ZOvv/ycZsG
+                pDTXIHOVSdC4CRqTgj/I0JgInZmgchM0Q4TGZWiGBJXJ0LkZjAlgkMAgdv/fL6Or4M/gAnyaCblS+6sA
+                UDI07eRDsTJPLnH8e8O+9k8j340aV3BC3AUl4ECybTk0/+xD0eeFl40te2v13hMGBEjV30GoICHgroeh
+                +cEMA4qvGaASAoF2sEAHIIgIeBsBQsA1BQFvPQABir8FTA+AMR2Kuz5CfuwHRnNAA8XGlqkbAKDdo005
+                VGRmyvD0M7/Y2jw2/DzW0afstzvZdgrSLZMPVZ8vOWHEmgEBsnDCNYarbR/G/GYR0vInAKKE4RNvgs9Z
+                jeLxVyK7+DSovhaMnb4YnKmwZo1EyfH3wuOuwvAJf4DFPhRmWxaOmP4gdM2Dft4vBUdQIXzz5b9tAoC+
+                nMNxAHsa3dhT74Wq6v3EzMzPuxWIfQIyaTsZ1UD6oQIkKNDq1qWki2cWTBUUVyVsGcNgsQ0BMXSkD5oA
+                X8c+pA+aAkf+RKjeNpjT8qH5PUjNHImUjJHwO6uRXjAVFns2BNkOW3ohmM5AhP7ZphIE7abCyWKS4mhx
+                gade32oqyU8lJQV2YjJJ5NnPq047WP2CRAu69KN+FteVyB1vbNmW7OSJQmzqoxnAiDtXbrvwi0Dl37eg
+                cvaH7qqWDmXHwerLShG1pHmOkK+sQ2I7smHZVTDZs2FoAeiqM0RlOUAESCYHAIqgVQcgEAM+w+Y5+vTF
+                KVcuqZz4yhVFcTf7WAeyZbuaR00qye6TLIbLqRrjkhh7iObrVgjKi7NZomPds7fTMnJEii/W1GkclTIl
+                xdHv21T+bobU+z5SOCmKQc3mJA0bOefsUNm1NlSu5O11P/COxp84YwbXdT/XNR/nTOP1ez/jbTXf8bba
+                4C/QvI5v2b1mEwDUOfnCeHW6/CrvQ2fZZ38AoMHtGxNviMxI/tJDWQO/uI+m/9cPRUuP5FcHdgFDPJTa
+                oJZ9X0GQzEgffCwcuRSUyMHLzoTA3bILTt3dtYdaRQPtXn05AAxKw/S4TBGjbfG+eVUd8a4ZhM30vvqx
+                ac7lJxXFzFPZ6k16rCPzcGZczNKMD2K9L69oirsHmiWy+RcDSF33QzKnoGnfctTteKfbwI4AlpRBEAQp
+                6NcPgE8nEDv27wgR3+Pi0XaHVYjLzQk0fvdljg4AOKEk+2QeZK16A5slL3qYDT4ccQxbb3lu885Y72ua
+                jcvHD4td3+9erR6Q+EUBYMPSoBOOlgPrsHt90KnVxo+vgsEUdNRuRN2+IAO4c83DaDmwOkhaPrkaAFC/
+                axkObHsrCEjVC133QBCtMNlyYE7JQYojHeaUHDCuQ9N80HQfNN0PCice3HjuegDgGuLalVR0+OLunbGM
+                fbsmrd1XBgBD82xjSBwWYHSe/eVkJ04SyMR4355fMDkmdp08PvulWO/b3Yr37auKWgcESA6DBzx1wRXq
+                b0Ug0AowwO9rgKEq8PsaQFmQmQp4WuDzNAEA/J4G6IYPAV8TVHewD1QQEXSEx8AZIHMNZTWDPrJaaz+l
+                Ict+SjhEykAJ8NWj51UBAO2D6f5o1YGYxky7q1r7VKs1uIJecj2aFtekY1d7YG/ShwoMpphUyYi91W2r
+                cL5jNsemIJmpZvuAVXRly681ZFMaVbytoCYbCJFhqC5I5ixwIwBP+z4cedJi7Fy9ELaMYuiGBqa7IZuz
+                ofk7ABBYM4ZBIBJc7bshmxxB96gcMIsaVneOnnvtvD98DAC4dH32+ouWPulE+nm5ksc86dSHyeXP/DTu
+                tZsm9LU/pBFCXNEvG53Ke7lp8gXxCrkDWkaqRe7weg1utcaWbe97b8e0v1505IZEJ23Ntg7z8Uc6/CSO
+                0Lt2T/snGVapkAJyq0f56diS9IsF2pt6KDrUsoo2+/ElWdpAASnKcgZhnEG25SJsXiqlDgWlBIKUDYOp
+                EGUZtozhkCxpkEHBjQzomheyJQOGFgABhWTOQHRnDUYwrcA/4b1K/uOxKd5Sn5ddObrw2MsAdHlzWnxx
+                yTTEsTMPKBreXFEVc74cZuGCvgaWapE79jZ4B8UDIgAkA0QAKM6VpvXls+CEkoyzu1+kjI7BueLEh9Zf
+                ufr+45ccKv5EDFrCkS4gckLga90N3QiACDJ87Xvh72xAe80GmOyZ4IxDsjpgtuYGNc6hE5V4xsobN1Yq
+                11xPGjnnJcjEdzrnaGsPMLeqvNfsNu4elG05P17nmt0afn/WqM7o9zsOdG40meLvjw0dviYAaBatZ46I
+                x2En4D4lOq3c7Tzj0ixb0uU5IShdeNyray5snT19dNbvDhEgEbzDQIKeoRV3I8ad+SxMprQeGWdeWdr1
+                v7O+DPvKXoDJ0g8NFSX80pc6uuOMAMjJMNNsmC8enoeL+yo6NMuK6mbvS3kO86Zqt3FqhkUYmWmhRxxM
+                +Tcow5YHAKNTEFd/y3QkLXvMGp15yoA5TAC/Kcm8RNONSyRRGLBChnJKEPC3wmIrgN/TDJM1CzWbX4G/
+                sy5mAV9nFap3/BeSObUfinGKIcPzh755TTqLQYH6lYZmW6+WJfrsyAxpzsGBCDxe5p0W/j/DhLj5HWny
+                8mQnLTfTPLGv7wxAU3ugn2o+ikZnoHPAgFQ8LXzqWS9hxNE3oOS4O+F1V4OKNmiKK3YnGSBJ1oOechAC
+                cE7hMJuzcRgSYxz72tk1d0xJ6dr3mjuV38TWrgD7a1xlSZNG1rdaUCCE5GVaQtdRHhEbOjyPxONmASA3
+                zZT6+ZamywYEyFHHLegiexZ7DlR3G4omXovUnNiL2Z5ehIIjzofWn0VEAFFxdgKAT9Ve2Li3/Sd3QDvk
+                QGzt1FoEgZKRmUIPudAkxL8F/c9Pqr5Ipq37X94ux+MHDCPW+3uMQRkp9zy2bO+JfdV72tic18L/v/ju
+                c5+/8+FzlyQEyM1f38X2rH8K7tZd2LHy8Q+brgAAIABJREFUz8goPB6lr0xFw97YJpfVW97E9x+eA3NK
+                QT808oCm8hnj7ltXZDPJ108dlTkp1SITQgiZ/+LG9Mp691V9lQ+oBhQteBNLMTjC6siWTjVQ0+r7CcDN
+                f//f7iHZDjnm6UaaXYi7wF64ccKWZAC56Koxw+M5luj06XGvV//53JJSj8o2xlfrsa7dZkb2rs+npO15
+                a8MXf+Zrv7rpifkLHz7o8ZboyB1PfK4K7FjzEGypQ6H6mjB5zuuwphfHLFA49hKYrJlo2LMUopwWnBUC
+                cEPvtfExAKmSZ9SHJ71f6T/pFri0dHgU2cuhvHbanKl/mjy4asONg1JiD0xnsJjEpJmAK57fdFa8nXgg
+                RGF7u/+8IzNiK6JUo+9DartMvwZiM2AmiYJzTgkhrKx9ytrRjp2wSApSuXDrnTM6br3s07/WvLR52CXv
+                3HvJ2tg8JWOgghXWlAKEHa8ZmgFJNMVhnSkMVQUlYXf/KgKeFlhTi6G4mxB5RZEQQOMUXsMEZkhIFVwY
+                ltJsM8tGKgBcckJuXP2iSaTegZDbc6bkT4v3zdfHicpBGR2TODbetzyH9GVfZes9elx/BRpjIIQwAHix
+                7dhtMtVhMAEBLkFjAnLM7UPuPWbTmp++upuv+XzRi7G4VhbcNYKOEkU5HbvX3o/GPbGZurqd/8X+sn9C
+                kFNARBkcBBNmP4b8UbMx8oR7oEcxSWHJhhCAcYqAIUJk0nIAsFvi3kyCy6+vHwgg50zJmxTvm80ilSdb
+                b5ZNmhKP2dqwx7m6z0VgF4fGPQCIQAA/7F10tmvuIMBgFCLVkS55rt298la+/pMbdi58atFsAKAydEGm
+                OsI/zXsAx17wP+SNij3Hg484D8de8F8EfM1BiYjwCPmIwCCsDwkPEMCweNv5pQDQ4lJmxMv7yYb60gHy
+                QHEXiaHqHyRbaZtbHxabtAFPf1bVJycsAEXxxW00h/+/Or10hGGQXuIaCd+TJIDOOWxm6+ibZ9R+9bcl
+                j14pbu4cto4FtaMEYHtG2sTf7VrzkMioBIHI8HvrUDj+KtRufxOCnApBMMFQXDBZM8ENBeAcu9Ythi2j
+                GE37v4HJmtXtSyeG7Mgpx/I7RzcCQEGGOe4mvsulvDUQKPI+ZNV3vq/fk2y9VlNsqswIwdu3TKrtq2xl
+                s/eKYTmxNUKvrm7ous5+Us6Po/1cAAzaY0ScE5ioCoFyHPDmGJuas2bfMfvRVQAgXnjOjT3M8N776F/j
+                xvBdEzWDQ5DM8LbvAeU6FFcDZIsClRkQZRlUsAFgMNnzoHva0NxRCbM9E1zXeznSjlRpkAjP4fGCJ2nM
+                wMNnj6oa0GlAX+JKmz/pQ1yzHHvtkX4Yi8QDImccV80c1LVw1zSPvvm47N3QQuRW4xR20QdVt8AnWeu/
+                r2Zn/PGyezf3UtFFpnGpFRNVZoEgBAEpynYYBDC0AAzJD4BDCygAPD1WCxFEaH4PqGgCJQSxrOlk6GhS
+                M5wAsOjtrXFtQlVlYP64Ln91a5+y0T0XjknKSdJrZY0XxVsgNa2+PstWNXp2xhU9DNZDeX9c9t6ZOhND
+                FxMZ0iU/FGJpfH1H+rjHbr67Ja6uNTKtbspcfEJO+z0MApiuQzY74Gvbh4KxFyOeS1/GVJitQ5A9dBoq
+                fnoRHTXrwbkAky0TiuIEAYdszgQHRbq9Yz0A3H/xUXHVXKJMBxQL9pyjMuMuEleC0T8j08WTcuPu6Q2u
+                +PU6vWpdmlUaFO/7S6uruxxML3n7vuGM+yBCBxEIWgKOwP925aUuuuF27aBK88hUIHqu647zwyDKqWit
+                LgVjRp9aYKYrqCh7GnnFszH8mLtgdxSieuvrGD7qLEimdGz+/HpQey6Id/9XoVK/jSt6CPTHgQDyrMl5
+                s+PLcjI6POp+u1nIZBx+xDfEZYRC3FntXjm+2HEhAEgxfQeEsYrj2VUV5hRIv/erqnLZKcVjLcBRAZXN
+                NPfhGai+1b/6xtnDu2LvTSrUtnBFwM5229p3fso6+YO/3dyvY5pegByV7U8PGHKPPUaQrDiotapkBywU
+                XmcNGiq/hLtxOybPfQXWlKCT7yETr0PHvtewdOeUvcBSeAL6FHucE/O9bgzIEEnnZE688wRKAYdNCms7
+                0g7GMTGT2HX9QON8jBRn/59eko7pJen+3ntqfCC6fRoKsq0zu7Q/jz9wUmOL23zKvMcTVoT0asVstI0j
+                Sd3OIQA4DN0Lq70QuSPPQFXZy1011f70PEyijFf2T9gEAHaTGNdyqupA86qBAFIEG7DpRIhPREmGqeuq
+                HdMOTb0A4DM4Um1yD4Bp3Fh1yrzHk/I+3Avy21fcwg2IGLjNMgHjBvydNSCCALN9ECxUR8msp8nk6z63
+                /vjsqV5KYxr3QqYDCyhsGIxTOnCba80w8I9P98u3zyvRACAYmXPg9dZ1KOWDM/o+ChswRta6zBsOTZQC
+                BkoIbBnDYU0dCkIoWpXgQfS/7pgyPTTRRkjkC/8Y1/QBtbqxomVonLoT/TGBUISB+EZ5+0khIPZVL8C5
+                3uMZ3aHPVd1Y9/y62rRDDcRf06/p1/Rr+jX9mn5NibLd3a5I5kWFNl4Qwy1KtEuWmZGuTELlHVH1LA2V
+                d0a2GdH2hFDb8fqxNIabmNJIDyIR/YnuR3lU2GZHLO8bUeWfjnaJEipbHurj01H19BhfVLihJRH9XhrV
+                v8j6erQd0R9nrLgm8QAZBtCEUMPzImJjR8bIDsfXXhRq8OlIdyoRdcWqpzzGpC2Kird9sH5URdQVjp9d
+                HulmJaquBSG3Lk+HY3dHtVMeFbebx4rnHfHt6YiQS84oH0CRC6Yqah4ckfVHIEVkfdHzMC8iFlW/gOiI
+                qLw09BzZwWiHRU9HPc+M9EkTESArsp7wSlwQ0ebSiJXJD9IPZ5STomgHSF3OiiJiVjkjMTgi7/zI2FMR
+                8xDtVyf6eyQ2FUW1uzSiraooHzw9HCzFqS9y/uZFxdbq0a++ALkkIlLZhIiKi0LfFoU6uCRickpD3xeF
+                o8qHys+PDPIVqmd+OAJ9dJsRUeuX9NGPcJ2lEc+lUYusNIoqzI8EWDxPVWGgRGFReCyR/Z0fMd6qGAsj
+                PBZHFIZFbkfzI9qMrq8qgtpVRY2lKqb6ZfnSp1YOT6k5HgKXDUYZOdT7LQAheFzHePBmgcAJJTzohhcD
+                jS01AH0sSxFUQWESqry5625eMf7Eff+YrQHAa6VV1549Jf/FdJsc1Gwcoqv5fWjWwp6Kw+q5xk4Ne77Y
+                0vLaRVNyXulvZe1eJT3dKn8BYFqEIqIv/Y4R1rcrqnGP2SQ+cjhhsKXTOGVsKv2yS4P0fzfPPfXI3e1o
+                lU3eLdtqXY/OmTLo/V8Cf0o1LkBloqgbFLohUO0Q/3RDoIohEM0QBN0QRJ0LxGAEjFHCGAhj5Gf5cU4E
+                BgJOdLgN8mUYGQHg8hmF0x02OVKLSf6Pft1qfvQ4X8pLkzD9wsnZL/OQj4eKNt8LBwPmt3uU8zrcath4
+                UAj9+mo/iIwBvWPR27u/PdyLL9NEfxelLSb/x7/o4wVpWK5t8tmT89/jnPOKZk/nE8v3zv1ZEZKC8KDP
+                aw6Eo4VRDlDeZbfV5RuFchBOug0cwUAo72HwCEKD5SPeERAQGvqRcHkeNDwjHESIfBfcOLvb5qEfDtkP
+                ACRiwKdL0A2zd7i5o8sHx42vbJ7Y5lbPJvjlJAJgWIblD5xzvrMt8Fq8fLMmpJxqSyICp8ksHnjkyiO/
+                O5xjeve7A6l2TT3y5+KQYqVh2bbUW88YsbTJZThX7WM/yxIQXZ2NAY20MmK2CowIYIYXTPcDIBBFM6ho
+                ATMYdM0FwhmIZIYo2cC5Al0JgHMGQiWIkhkggKH5oOsqCJFgNttAqARVcYMxBRAECMQMIskgugpD94Nx
+                DYJgBRGt4EyBoXsAg0AwmSBIFhCYALBDOGQOAyLskh9e1QKvIbc+uveKSuBhAMDgDOskgKfiF5pGZ5gu
+                /2JTY+Vpk/IWRcmMBMAQmJI6lF52uMdx9pS8KVZJmvyLm2AO5KSQNE0kfwdw52FHyHMuftBqkamwZ91i
+                NG1/B0dMfwCDRgdtohorV2DH13cgo3A6ppwd9CrSWPENtq28C6mZYzHtt8EwEP7OGuxc8yD8ngaMm/1P
+                pGQOg664sfnLBXC2bkfJbxZi8MhgHJbd3z2B2h3vYsSUG1A4IegSpnrL69j345MoGnc1hk+7MSgPNW5F
+                Zdm/QFgHJFs+wIxDJGEEr9hTRsAAtMP1+Uc3FXfZ2dw5d8TxydbsVvUfDjiVNo0xM1Qu+fwMKWaijy1M
+                4wBEp1c7zhE3DE//06kTc+/nnH9OCPkh/O6DtRXzTp9aOM1mEhKapk6vhtU7W3463AtvR4d02vgsDilB
+                K46qVj+qWn1ItYqgnIMFGTsYnEDRDTjMEo4YlAJKB7A8QFBgwbDwharDipDezgbJkl3AUwdNJkMEGZbU
+                7ismJnsBBo+7FFZHdwhNiy0HRUf+Dqa0InBugBABECVkDJ0NQ3NBkIOyl8YYMotnIz1/AlIzu2/nZQya
+                CCKKsGWWhHY+Clv6CBQcdQXsOUd2K12UDjDGQTkFEYJOMMAJeF+IGYx8CRChD2URgUg43MwMgXDV0Vr1
+                WfjL0FtWDAZwdqKTyDgHIfgx1SQd05/8lQ3ubwuyrb+RhOTtaZzAxQC6ELJkaP5cATxhmsUJ9j/zVWXZ
+                4Vx0d7+7h07JwYmJMquqZlQt39w06YaThx3U5LnBqTySZqZ3WUxJ0z/9cCMjAJCWlsq1WVlFxx0GDVdC
+                qXbnMlRu+Cd05oc1tQBaoBOCnAZH7jiYbFnQNX93jzlARAmUc3ia98LVvgOSyQbGaS8lI+eAWfCDETNU
+                c3HDm5VHH//CjRdUAsCLa13nXTbF8pbFJMqJ9NWv6ti0v+OvJ4zJua+/ZWqcgccHp8q3IUlTQQV43kzI
+                H0PsqghgDef8mCTiy75HCLnocMK22aOOyrZJqwHkJaKtJ8AmQki/2dy9bf4pKaKwITe1/56MOecwDIKK
+                VmVRSb75gcO+8FtaKtceSmethyoZusb9vhaueNq4qjh5wN3Y77KqFuABTwvX/B1cVV09fori4px7uM/n
+                5OsrKz+IAsYLyfS1za3qN7+0ZV4i8750Xc34drea1NwwzvnXW5q7vES8v67yAqdf45wlBsamTj9fs6P5
+                nMO95ra08r+6FC2ZoT+csEjI+b+Taeie17bk/xwbkYhfaKre+SH2r38U3PDBbB8MXXNDsKQje8hMpKQX
+                w9C8wQtFJMh3CaIVuh5AZ/0PaK//EZJsA6jQa+MP35amhMPo3PV1+P15jy/PAHBJMn3NsEvbnrlmXEKR
+                Yd1+I4VwI3QykTjrOqnQ0nU9LyctZYZJBBLdbVUFgZVbOmoPuzYzDcfICfKrrR614/11dZ8mUubl5dum
+                1Hdqvx+Ulpiv//JK7z2LrxjX8LMgpBByyqH6nQj4W2G15kI0Bz2l6LoPirsRVLTCkhLkLnTVD8VbD1FI
+                gSk16NVGD3hBKIfGGUyiFUQI4rnX3QDoKkwpmRDF4LUXJdAGzd8JkyWry/uZrnQg4G2DZMmCyeIAANjs
+                +UjPPxqEKzCl5YPpGsAIFE8NFFclEONaGAMgSmbkFJ8a8n3PeiGjRHUYjMKpp/nWdJy2FbgnqCgZV3IC
+                07mNJugIxjAMCIKQ8KWxS08qHNL3vfj4yevX97e5WRcizTgyc3Qywo7NRj8TrXTD4VxwnGlZIBid6F5g
+                Nkt1d3+0f1ciZU45tvj6RJCRcQ63X9swsdj+CH6mRM3WXADg+354At+9eQrq93UToabKUnz79mxs/7Y7
+                aljzgZVY8/bpKPvqhq537Y2b0Lz/GzRu/wCqGnTKEvC2YNsXC/Dd+6ehaX93MKqKH17A2ndPQ822d7rl
+                qa0fYM1bp6Ki7NluSmGygyEYjpszI+j6jjAIohVUckA02SDJVgiyHaqQBYhpsJjMkEQCAhWEq6DcACUG
+                wDgY42AM4IxBojp0GGX3/nBOl/+py2cWnUwFkvBW5VY5Xl1b83UiZe5dsiFrR53zb8nKj82d/g2jBqe1
+                AMDystrzO/zaSQl2nPsUA+lWedW9c0Ye1oPAT3c6L9cZBiVazi6S1e4XZzv7k3feQ2vE/Y3ufflppqv6
+                jYyM4fs97Tc4bKZpPydnKK779q22YZkK59CQPexEuDr2oaL8TVCmIuCtR17hLFBzCvZvfAEAgepvRU7x
+                iRCohOryJVANHd72HcgfcQrstjGo2/UxdKUDlHGY0wsg2zPQUb8RXA2AkeCumz10BpTOOuwv+zeoYEKn
+                cx/SBk2EIAapWVvlatTv+QQCdIgp2SGfaKTHXijAgCAwNCgOfFpdkv34Hy5qBYDLXi476/qislMypd0j
+                m7320SaqFllEDSZRBdNFUAgAMzChuHIj3grek3vgpdI0hZNL5CR2LIGSmoJMS0JWLg9fMeVS9OFo52Cp
+                wqV1ubsaMyTtBFOk2qOfyrwmZ4Cv2NO+6XAvuNGZ5uOCDpn6P8/tnSr213u6WKI7XttaABDFLFHJ49X1
+                p34/rgUAyqvd0zMt5L7cdPNsSez/eeyBjsD7hRmWC38Jopro9nameVFNRZlCsuTACHTC5Q9qwQkRIFoy
+                ARjwtO8OqigphSg5ADC42nci4GqCrntAuAmS2Q7F3whX03aYLZkgoghBssPQfWip/S5YlkqQzVlQmR9q
+                2y4QQQRR/ZBFO1iI73K27YLXUweTzQFBMAd9pcdwUkgZYIaB+dP95z8OPA8ANvPIXcfNmhxT1rj+5sfz
+                phyXNs8iBaak76vp8mVTMLToLAEsEyQxNorpDCaBNI7KsrT1t8xdb2xzNHYErs9LNycFsJomryuL8O8A
+                gCuMQESRloRRiSyJZT6fsf2wsquc5wJIODxjRpqMjLSM6wzDuI5S0vNEiwCPX8MATtCfI836Th98KkG6
+                mbz3wYbmu6+fVVj1S9KdiAIVOBWkkD95Bkqjjgq4EVSOUANawAmuBULyG4cgWaAGWmEE3NAUNwSTFbq/
+                E1qgLZgjhEWcMXBCYDLbAdECgCM4sSJAJTCiIHKWiSCCEPEgVlUEDASEMdTtrc8BgIdW8fTzh7ftfT50
+                M8Mf0Iw21lkhSsL3eZLts4173D9+U2l79e7TLD3sQq+eXZidjDFQh1/DvtaAdOW/y/tFjp//bJ8we1Le
+                +rx086hkAba+yj3nwmPyVQBYXstmTM0x5uTYEzqlgc44CjJM7y84bVjn4Vxsb66unvu76YWpyTqFoOHT
+                /qjyFP3bcL0BHXUtqqEyXD2yJP21X6IyU4y10Hs+EnDVA9FkR3rRbJjtuWCGAQIDTJDBlU4YhoKM/LGA
+                aEHeiDOQmT8VgmxHMOY2hyhaQSiBs3kbOlu3Q+AUVLLgkBj4U4KahiYNAHZUuDrJcF4OYAIAWMySMBhZ
+                IwGMBHDZlFGZmDIKuMPgoBTo9BuKy6u6OOPZJAm/Hz4V+Hhjo3vnvzbF9Fh28r9r817+fcGYoTBm7m0I
+                LBiZb0tJdpiGauD9jY23XXL84C7noScWC2doXiOxXZ1ztLhUbK117zycC+3uN7eK44c5TiM/42m3zSxi
+                6giHAGAJ53yJqnN4vUrbV9ta7r7ohKEv/UIQkgBEAKEETAtA93WAg0EypUKQU0GIAEX1ICVlCArGnAuB
+                9q21stjjn/WKUjqc9T/CoAKobB2QXXGXwxNGYViHMgAQ7amcklbh4JQ2+DfNIpjSLJakwx4MyTThr+eX
+                /Oah80s0ilsUAKLBIIAGZSQCDsKDkU9H5icf4aWxM7D35W8qj77v3DE9LFSswAjdIiSIkICiswO1ir71
+                cC60hy88KlMQcdQvaTeSRQI5zZx54fFD/nMh5/8pazCunDJIXPKzIqTX3a51qjuZ1WQTskdfhPzi2SBE
+                REfzT2ja9xUC7mpI5nT4XNX4/v3fgnMdxZP+iEElc/rdSMOeZdj9/RMABzIHHwdKBTCWvCOkcAwRAwQW
+                sw+TR2dMAoA3LiR8cUOzdLgnMYTfpqCSJ5LLIANiADiAz1245EyH5Z1e7O/qAyUevz7NbklM7hUJQVGW
+                +Y2rs63Vh3OO9ne6TxriSBlpSdz2XQXwHIAGn6pLOw94qNetsUklabBbZaPDp+V2eo1ji7Ll0QBNG0gf
+                J+cLrzY5A5flOsyzfjaEPHH2/CwLOVtIyx4D0O5AApmDpiI1awR2r38GbVWrkDvyDIw/5RlQQUx4UeWP
+                mov8UXPhatmFXesfBxUITJb4HrITQE1wA2Ce7iAB9jx9HYDR3dtoSKMXul72/4fk9Gprdrf7Fx4zNK00
+                Xp7CzJx5us4KEq27w6cbX/zU8MPhHM/l/yqnRBPOsdCkzl3vJIQ809/MD75RftIFM0e+VzzImiUlYSqc
+                k2Y6STPYj5JAexx/FNyyTD66gA0bbq6seOyGW7X/M4T86vNn24eJZXr20Cli8TH3QTZ1+61sO/A9VG8j
+                zGmDYShuHNj+LmyOocgcdDRonCggsSRS3d+OlroyuJrKYDHZwboQZWC7BzhAiAForq74aw4y6BoA14Sf
+                X1pRnXX0SEfRUUNtQ1xeNrGqsfMYVRBzMq1yYWGmxUG73bgyJGMyk1CHgxPCGaATQCKA12eg3a9UuPza
+                SzKRXho12NbSn+pOO9I0MaAmRtBUxqEarOmbTXUbDydCPnPZ6HSHXRycyHEHB0dAMeDXSEJRrxdeNmHl
+                QiB7W6XrlrwMy5OZqQkao3EOAjL19VU1V19+4pCugFy3Fn2BY0amv5Zr9Rx96Zd3o9nNvmv0Gq+8VDPt
+                w9X3XdhxqOaKfPnlG6VFKXXTNVcNcbmaIIpmEMkM1dMASU6BbB8M0WSB6uuAGmgFNzQMHnsFBo86q987
+                Tt3uj1FV9h9wwpCWNx4EHJyxIFIKMoyAG7rqhD37SIw+7k5U/vQqmitXQrbYIVuzQ8cevU3gKAdEwYDO
+                JHRoVrQr9pqcNLE1i1Zu8/iNhg3VluqajvQyr9ZR7ems6fzP42/3cme8u95TPirfNj4hBQs3cKAxgABj
+                r2Xl2evsAhls6SkRcwDpALYB+A6Aqd7l923e5+z8brez7YPSisbd/z7LnfSO81K59NrV43cBKE6i+L8I
+                ITceToSsC6hzrRCWOkw0AbzgaHNpTY9865rxxJzs3UnRQM7v1zlbJCZk78HAQeDzG/+wW6WbI7989fFT
+                kx1y54o0ucMhCgYUI6jdDugmdComDt29Zkuz4502j/rRg7c91JTUDhnwdXCVtoCKZtizRgWjBrBg7A4Y
+                KkAo/M4DSMk6EmNPeRqikLgQUFAyBwUlc+Bu3oXd3z8JEA6TLYJlJSEnxKHbLrrWCcb8ALfHRfqQCStU
+                JoByHRmyE1ly5xDOMERhwkSTKOCEESooaYRNVOHTs3HJSffXnvj2OWPx5ngnALy7uuaKjBRxfKLjEYjg
+                +7Y2cMr8aVnrfg6WtkCWLvL49WGJyo9tbgVfbmracLj7K4rS6RYjsXMlDgJNYNuSRcYQ6TQbjEBMaMlS
+                EAA2iziUcy4SQrqUHd84jzowL29NjcZkB+MGVCYB4BCJjlyrQkDI9NMd7dMJx/PnfX0HnKpNd5i8O1ZX
+                F75+49U3PNFPLSsIQMEp6xklMMwNcQbZlgW/pw7bV9wB0WRGfsl5yMif1O8httdsxIFdHyDgrYPVmhu8
+                Q8kZQERwwwct4IQtYxgGjQpePBg5bQGyC2ehZvtb8LVXwGzPQzyHWEHEpOCc9jhK1EMaWADQuQCJcuRY
+                XC+FkREALpw+eHySkHb+XMgIAOcfP/hYUUj8nIaD1Jdub/j+cPc3W8BIThPpJwdngIVI7w2kXRcXGkTD
+                ABLcQxg4GjrUbYMzzD00jyv1Eud5WOkK6upCEQBDF5p1LoJzQAs1RgFkmN0i53TciYVVj29dcfvjIAI6
+                3IE2mbd9v6K6sOy+NRctxv/G9gjXLFLCdUo4p4SToLo+etsn0FQ3zLZ8ZBXOgGiyw56amC7Bkp6PIUec
+                C1/HHrTXbYCBAESaAiJQeNtrYUsvxvDJt8Bkc3SVceSOhS19IXZ8cy8UfwvMtkGhSJb9VfcE0ddMVWiQ
+                0RGwulc3TF4OPAUAuODxH4440Oq9YGiCAecVRUfpjvZl+BnTxOLUJBwxcWSlyCv/86dj9hzOvi7/qf50
+                n2qclIivH8II/KrR+eF3BwYU6SWVoCCQqKqCc1BC8ERpRy8vdKPRavbrktVM9JhIHkkhOQE4F0JbCOlS
+                MKbZTJmU5p15yQTXmVdP/tfCjuvvQKtiB6Ha6vUtRz0tEsJHEg5KOYPBSaT+MrSDUwjQIDADZksuUnPG
+                gHEVuh4AISIY08C4BpMcvLnBdRU6U0EEKaS44TDbCmCxF0Dzt0NTPaCiFNKQMljtg+D31KN6xxsYPvEP
+                EEJ3g1V/OyrLX0LA3wiLfQg4Z0kswe5d3pri++nu08/uUmb8flbhkRZJTFhLKUiC54cK55c/FzI+tnT/
+                OQByEi3X6TWwekfLlsPd30yz6RjDSAwrOOGwW4Tq97e1JG288NWOlkyfxk6xJupjiBB4VeO9p87J73VO
+                e2nG6gkSEUo4JWCc9HsRshALbhY1SMSAYQhgkLDfnQWvbllWqZj+fN35N+8AAPGsuQsK/7j4CbNJATFC
+                J9ocgEY4feH+W724TpPeOfWl94+Sdsyr/HEx/KoCHlrqgmCF4quHpnpRMuV2mFNyULvzQ7hayiFZMtHV
+                5xAumaxpMFuDVmrh3Y5QM0zWfLhbd2LjsitgGAGAMBBqhcmaHQzOzQwkbNUTEkt1iCDEQK69qoeq/+QJ
+                uTOTkocoabj/vJKfbYecWpw6lnEuJhqUqN2rBdZu71hzuPt79OiM6arOEoNbcGzrvrz16KQVXzZCz1c1
+                NsGa+NlHu/3mVZfHlC6ljpMdkttqcAKNizFu2ga3Rg0iKBhs1AtRBBQmQdVluBWLt8JlfqG8Ie3Nv998
+                U3k8GRLP3XNWtWPTAAAJn0lEQVRbIF7vnh+74KYjbLZ5kiiB2osgUSHEDgZtWQOeTOiBTphT8kHNZki2
+                NEi+HJjNGV2mcwRiKCySAr+vuecZQNf/AiSrAyYa3D2pIHUpmJK5N8gBiFQHA4FXtWP990O6/MZMvmf1
+                KHfAmJNiTox6ev06vtnauvrnZFdnjM26PplyRTnmzb+bkbP1scPY19d+bCjSgRJZTAApCNDuUbG92hVI
+                tt2Pfmy4YNpwx/NigsjIOfBBWdMf8cLsXjE/n3jmr5mKbr5VlwOgAgMMBh6pveUEZlEF5wQCdHDOUelK
+                aWhyu1/b6k5/9bE//aVfosJB1XS1ejpr1U0YInZCZyrAQmjEOTg4NMMHxgNQ/O3IG3IabGnDoXmaQEUz
+                eAJnjQQAoxQQRHDVj9a6tWitXgND98JkTgWhJhAaMjonIUTmsaTGbmpFAYjEgEpI1Qv7TisLy493nTli
+                gsH1/ISlfQq9os3z6c+FjG9sqD8dQEai5QI6h0snH00ozvYezv6OGpZ2YcCv5yeqDW7t0PBRWXPC3ize
+                Kq2efMqkvDezUuTRiZb1BHRsrepYeOHUvF6KpAsWPUuPKHI/V5xSZzdAYRgUYcWOSAyYBA26If5/7V1p
+                bFxXFf7uW2aLZzye2uMkdYujLlmqgEMCSkABJypE0BaiFlUlioQlaKu0ampQJVqWMihEIIEUq6iASJES
+                okosVWVESAXU0TRFEIJFhqo0TZ2o0yTe7eZlPB7P9t7hx9xnTp7feDzTJPaPOZLl++76ne/c5S13zsWF
+                VDQ/YQYf//L9T9S8L7ai0vuf/MGBwK8PpFpvvvKCChOm7MRClM7c9XoaQXoDxi72YWLoOBTIAUPV3WKW
+                nDPKb5PCA4+/CS2r7kZjdB0aI+sAVcHU+NuYHD6F9MQ7KGSGUShMwRIKgk13INi4Cpn0GFKT/4WmeaH7
+                oqUayQTUS339P9lx7v9vKVfuQA3uS5Z5tbNf//wdi3a7uv4m/1Yi0qt1ZJWbyeOV/tENa5+OR/wNSmrD
+                ioaP5HMiSwBJt9ZUhZ2EBVhQQKpGOlmIvJ+1zh3du2mOK5DNzf5N2RrOinxjeAoHfvufBbnQeP61y599
+                YGP4G63LsA0gTy17FTN5E28Npvd9Ym10n1v6gxuHHrvFn3/Qp2SRMX2zb1YvGvqJU6Mtzy1XBk/s2XNg
+                /FrYuCL6F37+yF833ha5O6TOIEPeCk9y4ppAKimsgawsMlODyKVHAKGioXk1mts2IxhZC1VvgifUBJ+3
+                aU4N5/t/hsuD/Qg0BJExIxgbOf/APV858jIAfPPFN+/6zv2r+wJetbWa57DpbAGWT38xJMTuxRqQRPR3
+                AFuwxGQklf/Hx596ddvFg/fMHt7949eSDU996kMDqMKz3OyKnjcxbOQLfr9IeoR6OxEJ6WoTihBQBcHv
+                0eDR1Q+MPT1dxKgxs+72tpDrC6Q//P67x25upM81e4yZ0+OR/ggNH/7Cn7905MqvduSvB5cVV4mv7fnl
+                Z/72x737PQH9WwSCmHfQXQtvECR31eUBIeAPtiEQagOgQFU9mE4NYfLSP3FlLIFg0xpsvO/g1cUtAhVL
+                34h8ShajWZ/xu+TWd4AjAIBHt7XfqQnRqlQ9iwInzk4v2vPjkz89u2XGoi1+Zentx10e8uzmgxEAmgt4
+                uGjRcq0GvD6PilVRv47Sz+aui+SJcHIgte/Tq8PPlsvzw+f3b7+Qu/XYK/9Wd/3i6V3MfcjB68blgm7b
+                UjMBEfARPMKCiRvpwFWwjToWzGIWMLPQ9BBuavskzHwKp48+jFBrB5ZF70IhPY6Ji6+jmLsMf8NKmChC
+                VbKvH/7eI2/atUSi3t2+GnYbtYT0M/et13oXq9M/0XXndnl/QlgiPnSJCMOTMyPvjaWHnGkfbm/cZFny
+                /JYlIoTSfpeB8XT3umiw4ob1Zx7/9nEAx28kxooD8uRv7t0bask9Y5kqrEXtB/ZPmQhAASAFqh6B0PNI
+                Tb4NY/Q0FFWHroeg6SEAWeQsgRVm4k92Dc++9MYGkacvwl9dy5ZJSJk00ORVxxen45s6gK0L/238DbKI
+                AM6OZPq2r2+d80b0o7eF711sfBZZKJpEHk0deXd85tXDxy989fsPrSlgCUvFAbn5oaPPnXx515lAaOVf
+                lkg3YPNdAUSApvmlaxABSwAKFeDXCng33Yqjby0/A5QWtq1rWkJnLkydCgW0jFBgFIpWUZQc6TjvtYUF
+                FAFCo1dvMTLF6GSo8eBiafyjY+eDH7slnLk14v1XvkjvWYApSqPzRh+wKQgoKgK6ILQIIcjvm3um5Eun
+                hh4FKCM3J4+jtJNRWwDW0rs9+6xMQuGSkR0cuzwzQgTh1xWvWfI1A0UhoQnV+36mOJYcnz5XzFu5gFdb
+                NjGdTw+mcwMrIr6+xzrbs6hLXepSl7rUpS51qUtd6nI9HsgW+HKBOgCEWVRSCJGUae0oOf9NCCEMGReG
+                9AAnxRBCJGRap10HAIPlSwghDEdZO87Zvl0eLm23l4sTQsSZPrAxOfUUQsSdeSTupBAiWQMfdtxV+Z26
+                yjrbZbtxZ1kW1+liJl6etz2rE9PzKoyyPkMIkXDjmpct0779aWCOjWxe3HRhbfH+4RY3r/3cOHJp03DL
+                X4Y/V3xuerN4p00Tsq55OalaiKhDHgwUJ6KY/AsTUa+M7yGihAzHZBk7LeYId7ODhjqJKElEBhHZRIXl
+                dZLlCcuycRl3iGHgZefDYzAMtj47y+jZw8I2Bht3uEY+bJ1iLK2TlSEiamc4e+yOL6+TJPcjyvZjjKMY
+                EXWzdhISj81tjNXbyfPJsK3bzjK6OXnqdtghJnG62shR1mD1d7HrnTI9xvSNu5SbYz83jmT8IYbF5jnu
+                Yg8nf674yujdwfs064eJ+frtB1pKWQciIjIcxNkG7pHXHRI8F0MqF5bXNjkJFu6QHZID5/XPlmW4eJvz
+                4emRGOK83TJ6GizMcRIzWrV89Dj4SDp46mV19rI6u2Rcl42dYd3JMbm06czPdeP5ruLVoRs5eWL5uXSX
+                s5GjLLdDQvKQYG0fYhMTHzxl7VeOI24PB/9u9jAq4Sund5k+TfYKXomTWgbjHMM7VqMkX81cjB93EGMw
+                EmNM4Q4+M7rU2TOfouXwsHzdjlWvo5yeLMxnP6MWPlxw8pnU1v0Qm4VtDN3MwHF7pnYbYGX4MPiqIf+H
+                HTZJ8DTWvm2DuMvq2OPAFZe3f3NsVGYgd7OVu4vx3MtWpjgLl7XffBwxTpOOyS7MFok4uxOohM9Vb7tP
+                O/qA66JRf0quCx8QXXUWlrb8D2l6puFNFxFbAAAAAElFTkSuQmCC
+</property>
+        </structure>
+    </list-property>
+</report>

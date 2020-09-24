@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+		<Author/>
+		<Title/>
+		<Description/>
+		<Subject/>
+	</DocumentProperties>
+	<Styles>
+		<Style ss:ID="HyperlinkId" ss:Name="Hyperlink">
+			<Font ss:Color="#0000ff"/>
+		</Style>
+		<Style ss:ID="1">
+			<NumberFormat ss:Format="yyyy-M-d HH:mm:ss AM/PM"/>
+		</Style>
+		<Style ss:ID="23">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="21">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="20">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="14.4" ss:Bold="1" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="24">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="22">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Bold="1" ss:Color="#000000"/>
+			<Interior ss:Color="#7f7f7f" ss:Pattern="Solid"/>
+		</Style>
+	</Styles>
+	<Names>
+		<NamedRange ss:Name="__bookmark_1" ss:RefersTo="Report!R4C1:R127C3"/>
+	</Names>
+
+<Worksheet ss:Name="Report">
+	<ss:Table>
+		<ss:Column ss:Width="192.0" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="192.0" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="192.0" ss:AutoFitWidth="0"/>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="20" ss:MergeAcross="2">
+				<Data ss:Type="String">Liste des clients</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="21" ss:MergeAcross="2">
+				<Data ss:Type="String">Usage exclusivement interne</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="21" ss:MergeAcross="2">
+				<Data ss:Type="String">Rapport généré le 16 mars 2013 17:46</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="22">
+				<Data ss:Type="String">Nom</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="22">
+				<Data ss:Type="String">Téléphone</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="22">
+				<Data ss:Type="String">Contact</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="242"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=31000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="168"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=97823</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="249"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=10100</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="237"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=28001</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="276"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=2060</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="465"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=28023</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="206"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=038988</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="348"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="103"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=44000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="471"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=3150</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="114"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=3004</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="333"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=4101</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="256"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=78000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="406"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=75016</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="198"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=58339</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="187"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=EC2 5NT</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="121"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=4110</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="415"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=80686</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="293"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1700</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="128"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=60528</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="219"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=92561</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="344"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=28023</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="173"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=51247</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="202"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=V3F 2K1</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="339"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=71270</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="424"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=10022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="189"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=2</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="239"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=91217</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="379"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=58339</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="321"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94217</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="458"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=28023</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="335"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=14776</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="385"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1227 MM</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="171"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=59000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="145"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1734</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="307"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=12209</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="157"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=70267</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="495"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=51003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="489"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=WA1 1DP</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="323"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="148"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=079903</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="216"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=08022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="141"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=28034</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="412"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="443"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=04179</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="273"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=80805</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="473"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="462"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=50553</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="175"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=97562</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="447"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=97561</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="362"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=51003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="240"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=PO31 7PJ</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="357"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="166"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=069045</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="125"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=01-012</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="227"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=8200</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="167"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=N 5804</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="484"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=41101</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="496"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="211"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=null</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="361"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=44087</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="480"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=196143</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="386"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=42100</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="172"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=75012</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="119"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=44000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="131"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=10022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="369"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1675</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="250"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=75508</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="350"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=13008</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="286"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=51247</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="347"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=91003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="247"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=60528</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="456"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=10022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="452"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=8010</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="209"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=67000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="319"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=24067</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="320"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=50553</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="124"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=97562</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="129"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94217</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="477"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=68306</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="486"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=71270</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="151"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=10022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="223"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=01307</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="299"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=N 0106</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="363"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=62005</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="204"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=58339</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="177"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p= 530-0003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="311"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=90110</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="314"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=B-1180</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="169"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1756</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="376"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=3012</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="233"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=H1J 1C3</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="481"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=47625</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="353"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=51100</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="278"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=24100</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="260"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=T2F 8M4</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="381"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=B-6000</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="382"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=5020</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="356"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=0028</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="146"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=69004</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="448"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=S-844 67</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="303"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1043 GR</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="487"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94217</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="112"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=83030</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="282"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=2067</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="409"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=70563</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="324"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=WX3 6FW</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="334"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=FIN-02271</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="455"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=97823</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="161"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94217</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="328"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94019</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="450"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94217</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="398"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=106-0032</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="259"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=50739</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="186"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=21240</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="205"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=90003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="201"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=WX1 6LT</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="298"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=1203</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="181"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=10022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="144"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=S-958 22</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="459"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=52066</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="0" ss:Height="18.0">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">&lt;client id="475"></Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="23">
+				<Data ss:Type="String">http://weather.yahooapis.com/forecastrss?p=94019</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="23">
+				<Data ss:Type="String">&lt;/client></Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="24"/>
+			<Cell ss:Index="2" ss:StyleID="24"/>
+			<Cell ss:Index="3" ss:StyleID="24"/>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23" ss:MergeAcross="2">
+				<Data ss:Type="String">16 mars 2013 17:46</Data>
+			</Cell>
+		</Row>
+	</ss:Table>
+	<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+		<PageSetup>
+			<PageMargins x:Bottom="0.25" x:Left="0.25" x:Right="0.25" x:Top="0.25"/>
+		</PageSetup>
+		<Print>
+			<PaperSizeIndex>9</PaperSizeIndex>
+		</Print>
+	</WorksheetOptions>
+</Worksheet>
+</Workbook>
