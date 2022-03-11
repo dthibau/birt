@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="DemoDS" id="22">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.xml" name="ClientXML" id="48">
+            <property name="FILELIST">clientLink.xml</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Customers" id="23">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CUSTOMERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
+                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTOMERNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <text-property name="heading">CUSTOMERNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACTLASTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTACTLASTNAME</text-property>
+                    <text-property name="heading">CONTACTLASTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACTFIRSTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTACTFIRSTNAME</text-property>
+                    <text-property name="heading">CONTACTFIRSTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PHONE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PHONE</text-property>
+                    <text-property name="heading">PHONE</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTACTLASTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CONTACTFIRSTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">PHONE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">DemoDS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <property name="nativeName">CUSTOMERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CONTACTLASTNAME</property>
+                    <property name="nativeName">CONTACTLASTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CONTACTFIRSTNAME</property>
+                    <property name="nativeName">CONTACTFIRSTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">PHONE</property>
+                    <property name="nativeName">PHONE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select CUSTOMERNUMBER, customerName,contactLastName,contactFirstName,phone from Customers]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNAME</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACTLASTNAME</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACTLASTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACTLASTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACTFIRSTNAME</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACTFIRSTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACTFIRSTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PHONE</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PHONE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PHONE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.xml.dataSet" name="ClientCP" id="49">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CP</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">CP</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">ClientXML</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CP</property>
+                    <property name="nativeName">CP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[table0#-TNAME-#table0#:#[/clients/client]#:#{id;STRING;/@id},{CP;STRING;}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CP</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CP</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>MAX_ROW</name>
+                    <value>-1</value>
+                </ex-property>
+                <ex-property>
+                    <name>XML_FILE</name>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <joint-data-set name="CustomersWithCP" id="50">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Customers::CONTACTLASTNAME</property>
+                    <property name="alias">CONTACTLASTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Customers::CONTACTLASTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Customers::PHONE</property>
+                    <property name="alias">PHONE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Customers::PHONE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ClientCP::id</property>
+                    <property name="alias">id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ClientCP::id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Customers::CUSTOMERNUMBER</property>
+                    <property name="alias">CUSTOMERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Customers::CUSTOMERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Customers::CUSTOMERNAME</property>
+                    <property name="alias">CUSTOMERNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Customers::CUSTOMERNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ClientCP::CP</property>
+                    <property name="alias">CP</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ClientCP::CP</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Customers::CONTACTFIRSTNAME</property>
+                    <property name="alias">CONTACTFIRSTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Customers::CONTACTFIRSTNAME</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTACTLASTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CONTACTFIRSTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">PHONE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">CP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="dataSets">
+                <value>Customers</value>
+                <value>ClientCP</value>
+            </simple-property-list>
+            <list-property name="joinConditions">
+                <structure>
+                    <property name="joinType">left-out</property>
+                    <property name="joinOperator">eq</property>
+                    <property name="leftDataSet">Customers</property>
+                    <property name="rightDataSet">ClientCP</property>
+                    <expression name="leftExpression">dataSetRow["CUSTOMERNUMBER"]</expression>
+                    <expression name="rightExpression">dataSetRow["id"]</expression>
+                </structure>
+            </list-property>
+        </joint-data-set>
+    </data-sets>
+    <styles>
+        <style name="EnteteColonne" id="46">
+            <property name="backgroundColor">#808080</property>
+            <property name="color">#FFFFFF</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="47">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<CENTER><B><span style="font-size:large">Liste des clients</span></B><BR>
+<FONT size="small">Usage exclusivement interne</FONT><BR><BR>
+Rapport généré le <VALUE-OF>new Date()</VALUE-OF>
+</CENTER><BR><BR>]]></text-property>
+        </text>
+        <table id="24">
+            <property name="dataSet">CustomersWithCP</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <text-property name="displayName">Customers::CUSTOMERNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTACTLASTNAME</property>
+                    <text-property name="displayName">Customers::CONTACTLASTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CONTACTLASTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTACTFIRSTNAME</property>
+                    <text-property name="displayName">Customers::CONTACTFIRSTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CONTACTFIRSTNAME"] + " " + dataSetRow["CONTACTFIRSTNAME"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">PHONE</property>
+                    <text-property name="displayName">Customers::PHONE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PHONE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CP</property>
+                    <text-property name="displayName">ClientCP::CP</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CP"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">id</property>
+                    <text-property name="displayName">ClientCP::id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="sort">
+                <structure>
+                    <expression name="key" type="javascript">row["CUSTOMERNAME"].toUpperCase()</expression>
+                    <property name="direction">asc</property>
+                    <property name="strength">-1</property>
+                </structure>
+            </list-property>
+            <column id="37"/>
+            <column id="38"/>
+            <column id="39"/>
+            <column id="54"/>
+            <header>
+                <row id="25">
+                    <property name="style">EnteteColonne</property>
+                    <property name="fontWeight">bold</property>
+                    <cell id="26">
+                        <label id="40">
+                            <text-property name="text">Client</text-property>
+                        </label>
+                    </cell>
+                    <cell id="27">
+                        <label id="42">
+                            <text-property name="text">Téléphone</text-property>
+                        </label>
+                    </cell>
+                    <cell id="28">
+                        <label id="44">
+                            <text-property name="text">Contact</text-property>
+                        </label>
+                    </cell>
+                    <cell id="51">
+                        <label id="58">
+                            <text-property name="text">Code Postal</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="29">
+                    <property name="height">24px</property>
+                    <cell id="30">
+                        <data id="55">
+                            <property name="resultSetColumn">CUSTOMERNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="31">
+                        <data id="56">
+                            <property name="resultSetColumn">PHONE</property>
+                        </data>
+                    </cell>
+                    <cell id="32">
+                        <data id="57">
+                            <property name="resultSetColumn">CONTACTFIRSTNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="52">
+                        <data id="60">
+                            <property name="resultSetColumn">CP</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="33">
+                    <cell id="34"/>
+                    <cell id="35"/>
+                    <cell id="36"/>
+                    <cell id="53"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

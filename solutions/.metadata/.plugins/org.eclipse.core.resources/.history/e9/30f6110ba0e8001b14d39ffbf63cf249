@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">odaDriverClass</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">odaURL</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">odaUser</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">odaAutoCommit</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">odaIsolationMode</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">odaPassword</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">odaJndiName</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">6</property>
+        </structure>
+    </list-property>
+    <property name="units">mm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="DemoDS" id="6">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="CommandesVintageCar" id="7">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Prix</property>
+                    <expression name="expression">row["QUANTITYORDERED"]*row["PRICEEACH"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">PrixTotal</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["Prix"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ORDERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ORDERNUMBER</text-property>
+                    <text-property name="heading">ORDERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRODUCTCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRODUCTCODE</text-property>
+                    <text-property name="heading">PRODUCTCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">QUANTITYORDERED</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">QUANTITYORDERED</text-property>
+                    <text-property name="heading">QUANTITYORDERED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRICEEACH</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PRICEEACH</text-property>
+                    <text-property name="heading">PRICEEACH</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ORDERLINENUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ORDERLINENUMBER</text-property>
+                    <text-property name="heading">ORDERLINENUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRODUCTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRODUCTNAME</text-property>
+                    <text-property name="heading">PRODUCTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRODUCTLINE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRODUCTLINE</text-property>
+                    <text-property name="heading">PRODUCTLINE</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ORDERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PRODUCTCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">QUANTITYORDERED</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">PRICEEACH</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ORDERLINENUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">PRODUCTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">PRODUCTLINE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Prix</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">PrixTotal</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">DemoDS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ORDERNUMBER</property>
+                    <property name="nativeName">ORDERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PRODUCTCODE</property>
+                    <property name="nativeName">PRODUCTCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">QUANTITYORDERED</property>
+                    <property name="nativeName">QUANTITYORDERED</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">PRICEEACH</property>
+                    <property name="nativeName">PRICEEACH</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ORDERLINENUMBER</property>
+                    <property name="nativeName">ORDERLINENUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">PRODUCTNAME</property>
+                    <property name="nativeName">PRODUCTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">PRODUCTLINE</property>
+                    <property name="nativeName">PRODUCTLINE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select CLASSICMODELS.ORDERDETAILS.ORDERNUMBER,CLASSICMODELS.ORDERDETAILS.PRODUCTCODE,CLASSICMODELS.ORDERDETAILS.QUANTITYORDERED,CLASSICMODELS.ORDERDETAILS.PRICEEACH,CLASSICMODELS.ORDERDETAILS.ORDERLINENUMBER,
+CLASSICMODELS.PRODUCTS.PRODUCTNAME,CLASSICMODELS.PRODUCTS.PRODUCTLINE
+from CLASSICMODELS.ORDERDETAILS,CLASSICMODELS.PRODUCTS
+where CLASSICMODELS.PRODUCTS.PRODUCTCODE=CLASSICMODELS.ORDERDETAILS.PRODUCTCODE 
+and CLASSICMODELS.PRODUCTS.PRODUCTLINE like 'Vintage%'
+order by CLASSICMODELS.ORDERDETAILS.ORDERNUMBER]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERNUMBER</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTCODE</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRODUCTCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>QUANTITYORDERED</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>QUANTITYORDERED</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>QUANTITYORDERED</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRICEEACH</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRICEEACH</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRICEEACH</design:label>
+            <design:formattingHints>
+              <design:displaySize>24</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERLINENUMBER</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>5</design:nativeDataTypeCode>
+            <design:precision>5</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERLINENUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERLINENUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>6</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTNAME</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>70</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRODUCTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>70</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PRODUCTLINE</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PRODUCTLINE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PRODUCTLINE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="table-cell" id="35">
+            <property name="borderRightStyle">solid</property>
+        </style>
+        <style name="table-row" id="36">
+            <property name="borderBottomStyle">solid</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="PageDeGarde" id="2">
+            <property name="type">a4</property>
+            <property name="headerHeight">0.5mm</property>
+            <property name="footerHeight">0.5mm</property>
+            <page-footer>
+                <data id="34">
+                    <list-property name="boundDataColumns">
+                        <structure>
+                            <property name="name">Copyright</property>
+                            <text-property name="displayName">Copyright</text-property>
+                            <expression name="expression" type="javascript">vars["Copyright"]</expression>
+                            <property name="dataType">string</property>
+                        </structure>
+                    </list-property>
+                    <property name="resultSetColumn">Copyright</property>
+                </data>
+            </page-footer>
+        </simple-master-page>
+        <simple-master-page name="Content" id="37">
+            <property name="type">a4</property>
+            <property name="backgroundImage">img/Confidentiel.png</property>
+            <property name="headerHeight">0.5mm</property>
+            <property name="footerHeight">0.5mm</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="38">
+            <property name="pageBreakAfter">always</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">GeneratedDate</property>
+                    <expression name="expression" type="javascript">"Rapport généré le " + BirtDateTime.now()</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="39"/>
+            <row id="40">
+                <property name="borderBottomStyle">solid</property>
+                <property name="borderBottomWidth">medium</property>
+                <property name="borderLeftStyle">solid</property>
+                <property name="borderLeftWidth">medium</property>
+                <property name="borderRightStyle">solid</property>
+                <property name="borderRightWidth">medium</property>
+                <property name="borderTopStyle">solid</property>
+                <property name="borderTopWidth">medium</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">190mm</property>
+                <cell id="41">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <label id="42">
+                        <property name="fontSize">x-large</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Liste des commandes</text-property>
+                    </label>
+                    <data id="43">
+                        <property name="marginTop">auto</property>
+                        <property name="marginBottom">auto</property>
+                        <property name="paddingTop">20pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="resultSetColumn">GeneratedDate</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <table id="8">
+            <property name="dataSet">CommandesVintageCar</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ORDERNUMBER</property>
+                    <text-property name="displayName">ORDERNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ORDERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTNAME</property>
+                    <text-property name="displayName">PRODUCTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Prix</property>
+                    <text-property name="displayName">Prix</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Prix"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">PrixTotal</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["Prix"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">NbCommandes</property>
+                    <expression name="expression" type="javascript">row.__rownum+1</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="21"/>
+            <column id="22"/>
+            <column id="23"/>
+            <header>
+                <row id="9">
+                    <cell id="10">
+                        <label id="25">
+                            <text-property name="text">ORDERNUMBER</text-property>
+                        </label>
+                    </cell>
+                    <cell id="11">
+                        <label id="27">
+                            <text-property name="text">PRODUCTNAME</text-property>
+                        </label>
+                    </cell>
+                    <cell id="12">
+                        <label id="29">
+                            <text-property name="text">Prix</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="13">
+                    <cell id="14">
+                        <data id="26">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">ORDERNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="15">
+                        <data id="28">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">PRODUCTNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="16">
+                        <data id="30">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00 €{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">Prix</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="17">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">0pt</property>
+                    <cell id="18">
+                        <data id="33">
+                            <property name="resultSetColumn">NbCommandes</property>
+                        </data>
+                    </cell>
+                    <cell id="19"/>
+                    <cell id="20">
+                        <data id="31">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">serif</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">black</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">black</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">black</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">black</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00 €{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <property name="resultSetColumn">PrixTotal</property>
+                        </data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="Copyright">
+            <expression name="value" type="javascript">"© "+ BirtDateTime.year(BirtDateTime.now())</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

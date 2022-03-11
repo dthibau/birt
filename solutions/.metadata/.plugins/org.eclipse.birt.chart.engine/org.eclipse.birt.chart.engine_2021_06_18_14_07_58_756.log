@@ -1,0 +1,134 @@
+juin 18, 2021 2:07:59 PM org.eclipse.birt.chart.device.swt.SwtDisplayServer <init>
+INFOS: SWT Display Server: gtk v4 880
+juin 18, 2021 2:07:59 PM org.eclipse.birt.chart.device.swt.SwtDisplayServer <init>
+INFOS: SWT Display Server: gtk v4 880
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.R31Enhance <clinit>
+INFOS: Advanced SWT graphics functions enabled.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl setProperty
+INFOS: Using graphics context org.eclipse.swt.graphics.GC@GC {140467461042992}
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.render.EmptyWithAxes renderSeries
+INFOS: org.eclipse.birt.chart.render.EmptyWithAxes: renderSeries() [1/3]
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.extension.render.Bar renderSeries
+INFOS: org.eclipse.birt.chart.extension.render.Bar: renderSeries() [2/3]
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.extension.render.Bar renderSeries
+INFOS: org.eclipse.birt.chart.extension.render.Bar: renderSeries() [3/3]
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:00 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl setProperty
+INFOS: Using graphics context org.eclipse.swt.graphics.GC@GC {140467461042992}
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.render.EmptyWithAxes renderSeries
+INFOS: org.eclipse.birt.chart.render.EmptyWithAxes: renderSeries() [1/3]
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.extension.render.Bar renderSeries
+INFOS: org.eclipse.birt.chart.extension.render.Bar: renderSeries() [2/3]
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.extension.render.Bar renderSeries
+INFOS: org.eclipse.birt.chart.extension.render.Bar: renderSeries() [3/3]
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.
+juin 18, 2021 2:08:01 PM org.eclipse.birt.chart.device.swt.SwtRendererImpl enableInteraction
+INFOS: Cannot enable interaction if an IUpdateNotifier is not associated with the renderer.

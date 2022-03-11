@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.birt.report.debug.ui.launchConfigurationType.script">
+    <intAttribute key="engine.debug.type" value="2"/>
+    <stringAttribute key="engine.home" value=""/>
+    <stringAttribute key="engine.target.format" value="html"/>
+    <intAttribute key="engine.task.type" value="4"/>
+    <booleanAttribute key="open.target.file" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.birt.report.debug.script.ScriptDebugClasspathProvider"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.birt.report.debug.internal.core.launcher.ReportLauncher"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+    <stringAttribute key="pde.version" value="3.3"/>
+    <stringAttribute key="report.file.name" value="/home/dthibau/Formations/Birt/mywork/workspace-2019-03/15_JavaScript/ScriptedData.rptdesign"/>
+    <stringAttribute key="temp.folder" value="/tmp"/>
+    <booleanAttribute key="use.default.engine.home" value="true"/>
+</launchConfiguration>
