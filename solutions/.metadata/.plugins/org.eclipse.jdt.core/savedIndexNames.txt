@@ -1,6 +1,0 @@
-INDEX VERSION 1.131+/home/dthibau/Formations/Birt/mywork/workspace-2019-03/.metadata/.plugins/org.eclipse.jdt.core
-646308851.index
-3195861386.index
-3325467121.index
-2055966164.index
-2658966625.index

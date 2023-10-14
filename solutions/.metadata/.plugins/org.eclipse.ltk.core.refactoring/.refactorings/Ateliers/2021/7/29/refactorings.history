@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Ateliers/Facture.rptdesign&apos; to &apos;TP4.rptdesign&apos;" description="Rename resource &apos;Facture.rptdesign&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Facture.rptdesign" name="TP4.rptdesign" stamp="1626698689660" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Ateliers/MasterDetail.rptdesign&apos; to &apos;TP8.rptdesign&apos;" description="Rename resource &apos;MasterDetail.rptdesign&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MasterDetail.rptdesign" name="TP8.rptdesign" stamp="1626776766723" updateReferences="true"/>
-</session>
