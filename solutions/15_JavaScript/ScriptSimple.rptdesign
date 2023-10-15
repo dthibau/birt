@@ -3,7 +3,7 @@
     <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[importPackage( Packages.java.io );
-fos = new java.io.FileOutputStream( "logFile.txt" );
+fos = new java.io.FileOutputStream( "logFile.txt",true );
 printWriter = new java.io.PrintWriter( fos );
 printWriter.println( "ReportDesign.initialize" );
 ]]></method>
@@ -16,6 +16,7 @@ frame.show( );
 printWriter.close();
 
 ]]></method>
+    <method name="afterRender"><![CDATA[printWriter.close();]]></method>
     <property name="iconFile">/templates/grouped_listing.gif</property>
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.groupedlisting</property>
     <property name="bidiLayoutOrientation">ltr</property>
