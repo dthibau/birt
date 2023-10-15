@@ -4,3 +4,5 @@ MyWork/
 *#
 *.zip
 *.jar
+**/.metadata/
+**/RemoteSystemsTempFiles/

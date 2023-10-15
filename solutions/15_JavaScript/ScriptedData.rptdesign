@@ -3,9 +3,10 @@
     <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
     <property name="units">mm</property>
     <method name="initialize"><![CDATA[importPackage( Packages.java.io );
-fos = new java.io.FileOutputStream( "./logFile.txt" );
+fos = new java.io.FileOutputStream( "./scriptedDataSet.log" );
 printWriter = new java.io.PrintWriter( fos );
 printWriter.println( "ReportDesign.initialize" );
+
 ]]></method>
     <method name="afterFactory"><![CDATA[printWriter.close( );]]></method>
     <property name="iconFile">/templates/blank_report.gif</property>
@@ -13,36 +14,24 @@ printWriter.println( "ReportDesign.initialize" );
     <property name="imageDPI">96</property>
     <data-sources>
         <script-data-source name="ScriptedData Source" id="7">
-            <method name="open"><![CDATA[if (typeof data2 != 'undefined') { // Any scope
-  printWriter.println( "Using CACHE ");
-} else {
-  printWriter.println( "Fetching Datas ");
-data2 = [
-	{Client:"Client1", Email:"client1@gmail.com", CA:1000},
-	{Client:"Client2", Email:"client2@gmail.com", CA:2000},
-	{Client:"Client3", Email:"client3@gmail.com", CA:3000}	
-];
-
-totalRows=3;
-}
-]]></method>
+            
         </script-data-source>
     </data-sources>
     <data-sets>
         <script-data-set name="ScriptedData Set" id="8">
             <list-property name="resultSetHints">
                 <structure>
-                    <property name="position">0</property>
+                    <property name="position">1</property>
                     <property name="name">clientName</property>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
                     <property name="name">clientEmail</property>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="position">2</property>
+                    <property name="position">3</property>
                     <property name="name">clientCA</property>
                     <property name="dataType">float</property>
                 </structure>
@@ -79,7 +68,18 @@ totalRows=3;
             </structure>
             <property name="dataSource">ScriptedData Source</property>
             <method name="open"><![CDATA[
+if (typeof data2 != 'undefined') { // Any scope
+  printWriter.println( "Using CACHE ");
+} else {
+  printWriter.println( "Fetching Datas ");
+data2 = [
+	{Client:"Client1", Email:"client1@gmail.com", CA:1000},
+	{Client:"Client2", Email:"client2@gmail.com", CA:2000},
+	{Client:"Client3", Email:"client3@gmail.com", CA:3000}	
+];
 
+totalRows=data2.length;
+}
 
 currentRow=0;]]></method>
             <method name="fetch"><![CDATA[
