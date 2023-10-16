@@ -6,48 +6,15 @@
 fos = new java.io.FileOutputStream( "./printEvents.txt");
 printWriter = new java.io.PrintWriter( fos );
 printWriter.println( "ReportDesign.initialize" + printWriter );
-printWriter.close();
-]]></method>
-    <method name="onPrepare"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true );
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "On prepare" );
-printWriter.close();]]></method>
-    <method name="beforeFactory"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true );
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "B4 Factory" );
-printWriter.close();
-]]></method>
-    <method name="afterFactory"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "After factory" );
-printWriter.close();
-]]></method>
-    <method name="beforeRender"><![CDATA[importPackage( Packages.java.io );
-fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "before Render" );
-printWriter.close();
 
 ]]></method>
-    <method name="afterRender"><![CDATA[importPackage( Packages.java.io );
-fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "After Render" );
-printWriter.close();
-
-]]></method>
-    <method name="onPageStart"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "on Page Start" );
-printWriter.close();
-
-]]></method>
-    <method name="onPageEnd"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter( fos );
-printWriter.println( "onPage End" );
-printWriter.close();
-
-]]></method>
+    <method name="onPrepare"><![CDATA[printWriter.println( "On prepare pageNumber " + pageNumber );]]></method>
+    <method name="beforeFactory"><![CDATA[printWriter.println( "B4 Factory" );]]></method>
+    <method name="afterFactory"><![CDATA[printWriter.println( "After factory" );printWriter.close()]]></method>
+    <method name="beforeRender"><![CDATA[printWriter.println( "before Render" );]]></method>
+    <method name="afterRender"><![CDATA[printWriter.println( "After Render" );]]></method>
+    <method name="onPageStart"><![CDATA[printWriter.println( "on Page Start" );]]></method>
+    <method name="onPageEnd"><![CDATA[printWriter.println( "onPage End" );]]></method>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
@@ -149,20 +116,15 @@ totalRows=data2.length;
 
 currentRow=0;]]></method>
             <method name="fetch"><![CDATA[
+    
             
-            fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println( "fetch" );
 
 
 if ( currentRow >= totalRows ) return false ;
 
-printWriter.println( "Fetch ... iteration="+currentRow );
 row["clientName"] = data2[currentRow]["Client"] ;
 row["clientEmail"] = data2[currentRow]["Email"] ;
 row["clientCA"] = data2[currentRow]["CA"] ;
-
-printWriter.close();
 
 currentRow = currentRow+1 ;
 
@@ -205,11 +167,17 @@ return true ;]]></method>
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
+            <method name="onPageStart"><![CDATA[printWriter.println("MASTER pageStart pageNumber"+pageNumber + " totalPage="+totalPage);
+]]></method>
+            <method name="onPageEnd"><![CDATA[printWriter.println("MASTER pageEnd pageNumber"+pageNumber);
+]]></method>
             <page-footer>
-                <text id="3">
-                    <property name="contentType">html</property>
-                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
-                </text>
+                <auto-text id="76">
+                    <method name="onPrepare"><![CDATA[printWriter.println("AUTO TEXT onPrepare ")]]></method>
+                    <method name="onCreate"><![CDATA[printWriter.println("onCreate AutoText " + this.text);]]></method>
+                    <method name="onRender"><![CDATA[printWriter.println("onRender AutoText " + this.getRowData().getColumnCount());]]></method>
+                    <property name="type">page-number</property>
+                </auto-text>
             </page-footer>
         </simple-master-page>
     </page-setup>
@@ -222,6 +190,7 @@ return true ;]]></method>
                     <text-property name="displayName">clientName</text-property>
                     <expression name="expression" type="javascript">dataSetRow["clientName"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">clientEmail</property>
@@ -236,25 +205,17 @@ return true ;]]></method>
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
-            <method name="onPrepare"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onPrepare"><![CDATA[
 printWriter.println("TABLE 1 Preparing" );
-printWriter.close();
 ]]></method>
-            <method name="onCreate"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onCreate"><![CDATA[
 printWriter.println("TABLE 1 CREATING");
-printWriter.close();
 ]]></method>
-            <method name="onRender"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onRender"><![CDATA[
 printWriter.println("TABLE 1 Rendering" );
-printWriter.close();
 ]]></method>
-            <method name="onPageBreak"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onPageBreak"><![CDATA[
 printWriter.println("TABLE 1 Page Break" );
-printWriter.close();
 ]]></method>
             <column id="22"/>
             <column id="23"/>
@@ -306,6 +267,7 @@ printWriter.close();
             </footer>
         </table>
         <table id="32">
+            <property name="pageBreakAfter">always</property>
             <property name="dataSet">ScriptedData Set</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -327,25 +289,17 @@ printWriter.close();
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
-            <method name="onPrepare"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onPrepare"><![CDATA[
 printWriter.println("TABLE 2 Preparing" );
-printWriter.close();
 ]]></method>
-            <method name="onCreate"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onCreate"><![CDATA[
 printWriter.println("TABLE 2 CREATING");
-printWriter.close();
 ]]></method>
-            <method name="onRender"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onRender"><![CDATA[
 printWriter.println("TABLE 2 Rendering" );
-printWriter.close();
 ]]></method>
-            <method name="onPageBreak"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onPageBreak"><![CDATA[
 printWriter.println("TABLE 2 Page Break" );
-printWriter.close();
 ]]></method>
             <column id="51"/>
             <column id="52"/>
@@ -418,25 +372,18 @@ printWriter.close();
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
-            <method name="onPrepare"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println("TABLE 3 Preparing" );
-printWriter.close();
+            <method name="onPrepare"><![CDATA[
+printWriter.println("TABLE 3 Preparing pageNumber"+pageNumber);
 ]]></method>
-            <method name="onCreate"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println("TABLE 3 CREATING");
-printWriter.close();
+            <method name="onCreate"><![CDATA[
+printWriter.println("TABLE 3 CREATING pageNumber"+pageNumber);
 ]]></method>
-            <method name="onRender"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
+            <method name="onRender"><![CDATA[
 printWriter.println("TABLE 3 Rendering" );
-printWriter.close();
 ]]></method>
-            <method name="onPageBreak"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fis);
+            <method name="onPageBreak"><![CDATA[
 printWriter.println("TABLE 3 Page Break" );
-printWriter.close();]]></method>
+]]></method>
             <column id="73"/>
             <column id="74"/>
             <column id="75"/>
@@ -483,98 +430,6 @@ printWriter.close();]]></method>
                     <cell id="70"/>
                     <cell id="71"/>
                     <cell id="72"/>
-                </row>
-            </footer>
-        </table>
-        <table id="76">
-            <property name="dataSet">ScriptedData Set</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">clientName</property>
-                    <text-property name="displayName">clientName</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["clientName"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">clientEmail</property>
-                    <text-property name="displayName">clientEmail</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["clientEmail"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">clientCA</property>
-                    <text-property name="displayName">clientCA</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["clientCA"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
-            </list-property>
-            <method name="onPrepare"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println("TABLE 3 Preparing" );
-printWriter.close();
-]]></method>
-            <method name="onCreate"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println("TABLE 3 CREATING");
-printWriter.close();
-]]></method>
-            <method name="onRender"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println("TABLE 3 Rendering" );
-printWriter.close();
-]]></method>
-            <method name="onPageBreak"><![CDATA[fos = new java.io.FileOutputStream( "./printEvents.txt", true);
-printWriter = new java.io.PrintWriter(fos);
-printWriter.println("TABLE 4 Page Break" );
-printWriter.close();
-]]></method>
-            <column id="95"/>
-            <column id="96"/>
-            <column id="97"/>
-            <header>
-                <row id="77">
-                    <cell id="78">
-                        <label id="79">
-                            <text-property name="text">clientName Table4</text-property>
-                        </label>
-                    </cell>
-                    <cell id="80">
-                        <label id="81">
-                            <text-property name="text">clientEmail</text-property>
-                        </label>
-                    </cell>
-                    <cell id="82">
-                        <label id="83">
-                            <text-property name="text">clientCA</text-property>
-                        </label>
-                    </cell>
-                </row>
-            </header>
-            <detail>
-                <row id="84">
-                    <property name="height">10mm</property>
-                    <cell id="85">
-                        <data id="86">
-                            <property name="resultSetColumn">clientName</property>
-                        </data>
-                    </cell>
-                    <cell id="87">
-                        <data id="88">
-                            <property name="resultSetColumn">clientEmail</property>
-                        </data>
-                    </cell>
-                    <cell id="89">
-                        <data id="90">
-                            <property name="resultSetColumn">clientCA</property>
-                        </data>
-                    </cell>
-                </row>
-            </detail>
-            <footer>
-                <row id="91">
-                    <cell id="92"/>
-                    <cell id="93"/>
-                    <cell id="94"/>
                 </row>
             </footer>
         </table>
