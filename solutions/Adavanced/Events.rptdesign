@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
+    <property name="units">mm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="StringParameter" id="4">
+            <method name="validate"><![CDATA[printWriter.println( "Validate" );]]></method>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Hello</property>
+                    <property name="label">Hello</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">false</property>
+            <property name="fixedOrder">true</property>
+            <method name="getDefaultValueList"><![CDATA[importPackage( Packages.java.io );
+fos = new java.io.FileOutputStream( "./events.txt" );
+printWriter = new java.io.PrintWriter( fos );
+printWriter.println( "getDefault ValueList" );
+
+]]></method>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <script-data-source name="ScriptedDataSource" id="5"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="ScriptedDataSet" id="6">
+            <structure name="cachedMetaData"/>
+            <property name="dataSource">ScriptedDataSource</property>
+        </script-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+</report>

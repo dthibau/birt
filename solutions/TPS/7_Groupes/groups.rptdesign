@@ -6,12 +6,6 @@
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
-    <list-property name="libraries">
-        <structure>
-            <property name="fileName">SampleSource.rptlibrary</property>
-            <property name="namespace">SampleSource</property>
-        </structure>
-    </list-property>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="248"
  extends="SampleSource.Data Source">
@@ -414,6 +408,12 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                     <property name="fontSize">9pt</property>
                     <property name="fontStyle">italic</property>
                     <property name="textAlign">center</property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">pageNumber == 5</expression>
+                        </structure>
+                    </list-property>
                     <list-property name="boundDataColumns">
                         <structure>
                             <property name="name">Copyright</property>
@@ -422,6 +422,9 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                             <property name="dataType">string</property>
                         </structure>
                     </list-property>
+                    <method name="onRender"><![CDATA[if (pageNumber > 3){
+	this.getStyle().display = "none"
+}]]></method>
                     <property name="resultSetColumn">Copyright</property>
                 </data>
             </page-footer>
@@ -463,6 +466,7 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                         <property name="fontWeight">bold</property>
                         <property name="marginBottom">20pt</property>
                         <property name="textAlign">center</property>
+                        <structure name="toc"/>
                         <text-property name="text">Liste de commandes</text-property>
                     </label>
                     <text id="299">

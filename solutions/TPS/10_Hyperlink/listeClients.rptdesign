@@ -22,7 +22,7 @@
             <property name="odaUser">ClassicModels</property>
         </oda-data-source>
         <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.xml" name="ClientXML" id="41">
-            <property name="FILELIST">10_Hyperlink/clientLink.xml</property>
+            <property name="FILELIST">clientLink.xml</property>
         </oda-data-source>
     </data-sources>
     <data-sets>

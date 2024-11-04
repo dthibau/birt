@@ -150,7 +150,14 @@ and CLASSICMODELS.ORDERDETAILS.PRODUCTCODE=CLASSICMODELS.PRODUCTS.PRODUCTCODE]]>
         </oda-data-set>
     </data-sets>
     <themes>
-        <theme name="defaultTheme" id="4"/>
+        <theme name="defaultTheme" id="4">
+            <styles>
+                <style name="report" id="19">
+                    <property name="fontFamily">"Sawasdee"</property>
+                    <property name="color">#ED08CB</property>
+                </style>
+            </styles>
+        </theme>
     </themes>
     <components>
         <grid name="EnteteFacture" id="8">

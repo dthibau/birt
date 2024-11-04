@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -952,6 +952,9 @@ and CLASSICMODELS.ORDERS.ORDERNUMBER=10100]]></xml-property>
                             </cell>
                             <cell id="62">
                                 <data id="74">
+                                    <structure name="dateTimeFormat">
+                                        <property name="category">Custom</property>
+                                    </structure>
                                     <property name="resultSetColumn">Date</property>
                                 </data>
                             </cell>
