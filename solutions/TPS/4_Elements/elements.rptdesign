@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.24" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.13.0.v202303021806</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -1357,6 +1357,9 @@ and CLASSICMODELS.ORDERS.ORDERNUMBER=10100]]></xml-property>
                         <property name="borderRightStyle">solid</property>
                         <property name="borderRightWidth">medium</property>
                         <data id="97">
+                            <structure name="numberFormat">
+                                <property name="category">Custom</property>
+                            </structure>
                             <property name="textAlign">right</property>
                             <property name="resultSetColumn">QUANTITYORDERED</property>
                         </data>

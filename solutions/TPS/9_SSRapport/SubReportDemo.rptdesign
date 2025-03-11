@@ -782,7 +782,7 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
         </simple-master-page>
     </page-setup>
     <body>
-        <table id="10">
+        <table id="107">
             <property name="dataSet">Clients</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -792,58 +792,24 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">CONTACTLASTNAME</property>
-                    <text-property name="displayName">CONTACTLASTNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CONTACTLASTNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">CONTACTFIRSTNAME</property>
-                    <text-property name="displayName">CONTACTFIRSTNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CONTACTFIRSTNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">PHONE</property>
-                    <text-property name="displayName">PHONE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PHONE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">CUSTOMERNUMBER</property>
                     <text-property name="displayName">CUSTOMERNUMBER</text-property>
                     <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
                     <property name="dataType">integer</property>
                 </structure>
             </list-property>
-            <column id="34"/>
-            <column id="35"/>
-            <column id="36"/>
-            <column id="37"/>
+            <column id="116"/>
             <detail>
-                <row id="20">
-                    <property name="backgroundColor">#ADD8E6</property>
-                    <property name="pageBreakAfter">avoid</property>
-                    <cell id="21">
-                        <property name="colSpan">4</property>
-                        <property name="rowSpan">1</property>
-                        <property name="fontWeight">bold</property>
-                        <property name="textAlign">center</property>
-                        <data id="22">
-                            <structure name="toc">
-                                <expression name="expressionValue" type="javascript">row["CUSTOMERNAME"]</expression>
-                            </structure>
+                <row id="110">
+                    <cell id="111">
+                        <data id="117">
                             <property name="resultSetColumn">CUSTOMERNAME</property>
                         </data>
                     </cell>
                 </row>
-                <row id="38">
-                    <cell id="39">
-                        <property name="colSpan">4</property>
-                        <property name="rowSpan">1</property>
-                        <table id="71">
-                            <property name="marginBottom">20pt</property>
-                            <property name="pageBreakBefore">avoid</property>
+                <row id="112">
+                    <cell id="113">
+                        <table id="118">
                             <property name="dataSet">PaiementsDUnClient</property>
                             <list-property name="paramBindings">
                                 <structure>
@@ -854,12 +820,6 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
                                 </structure>
                             </list-property>
                             <list-property name="boundDataColumns">
-                                <structure>
-                                    <property name="name">CUSTOMERNUMBER</property>
-                                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
-                                    <property name="dataType">integer</property>
-                                </structure>
                                 <structure>
                                     <property name="name">CHECKNUMBER</property>
                                     <text-property name="displayName">CHECKNUMBER</text-property>
@@ -878,92 +838,53 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
                                     <expression name="expression" type="javascript">dataSetRow["AMOUNT"]</expression>
                                     <property name="dataType">float</property>
                                 </structure>
-                                <structure>
-                                    <property name="name">Sum</property>
-                                    <property name="dataType">float</property>
-                                    <property name="aggregateFunction">SUM</property>
-                                    <list-property name="arguments">
-                                        <structure>
-                                            <property name="name">Expression</property>
-                                            <expression name="value" type="javascript">dataSetRow["AMOUNT"]</expression>
-                                        </structure>
-                                    </list-property>
-                                    <property name="allowExport">true</property>
-                                </structure>
-                                <structure>
-                                    <property name="name">Sum2</property>
-                                    <expression name="expression" type="javascript">row["Sum"] > 0 ? row["Sum"] : 0</expression>
-                                    <property name="dataType">float</property>
-                                    <property name="allowExport">true</property>
-                                </structure>
                             </list-property>
-                            <column id="101"/>
-                            <column id="102"/>
-                            <column id="103"/>
+                            <column id="137"/>
+                            <column id="138"/>
+                            <column id="139"/>
                             <header>
-                                <row id="72">
-                                    <cell id="75">
-                                        <label id="76">
-                                            <text-property name="text">N° cheque</text-property>
+                                <row id="119">
+                                    <cell id="120">
+                                        <label id="121">
+                                            <text-property name="text">CHECKNUMBER</text-property>
                                         </label>
                                     </cell>
-                                    <cell id="77">
-                                        <label id="78">
-                                            <text-property name="text">Date de paiement</text-property>
+                                    <cell id="122">
+                                        <label id="123">
+                                            <text-property name="text">PAYMENTDATE</text-property>
                                         </label>
                                     </cell>
-                                    <cell id="79">
-                                        <label id="80">
-                                            <text-property name="text">Montant</text-property>
+                                    <cell id="124">
+                                        <label id="125">
+                                            <text-property name="text">AMOUNT</text-property>
                                         </label>
                                     </cell>
                                 </row>
                             </header>
                             <detail>
-                                <row id="83">
-                                    <cell id="86">
-                                        <data id="87">
+                                <row id="126">
+                                    <cell id="127">
+                                        <data id="128">
                                             <property name="resultSetColumn">CHECKNUMBER</property>
                                         </data>
                                     </cell>
-                                    <cell id="88">
-                                        <data id="89">
+                                    <cell id="129">
+                                        <data id="130">
                                             <property name="resultSetColumn">PAYMENTDATE</property>
                                         </data>
                                     </cell>
-                                    <cell id="90">
-                                        <data id="91">
-                                            <structure name="numberFormat">
-                                                <property name="category">Currency</property>
-                                                <property name="pattern">#,##0.00 €{RoundingMode=HALF_UP}</property>
-                                            </structure>
-                                            <property name="textAlign">right</property>
+                                    <cell id="131">
+                                        <data id="132">
                                             <property name="resultSetColumn">AMOUNT</property>
                                         </data>
                                     </cell>
                                 </row>
                             </detail>
                             <footer>
-                                <row id="94">
-                                    <cell id="96"/>
-                                    <cell id="97">
-                                        <label id="106">
-                                            <property name="fontWeight">bold</property>
-                                            <property name="textAlign">right</property>
-                                            <text-property name="text">Total</text-property>
-                                        </label>
-                                    </cell>
-                                    <cell id="98">
-                                        <data id="105">
-                                            <property name="fontWeight">bold</property>
-                                            <structure name="numberFormat">
-                                                <property name="category">Currency</property>
-                                                <property name="pattern">#,##0.00 €{RoundingMode=HALF_UP}</property>
-                                            </structure>
-                                            <property name="textAlign">right</property>
-                                            <property name="resultSetColumn">Sum</property>
-                                        </data>
-                                    </cell>
+                                <row id="133">
+                                    <cell id="134"/>
+                                    <cell id="135"/>
+                                    <cell id="136"/>
                                 </row>
                             </footer>
                         </table>
