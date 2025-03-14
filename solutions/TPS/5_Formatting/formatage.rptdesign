@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.26" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.18.0.v202411161754</property>
     <property name="units">in</property>
     <property name="theme">SampleSource.defaultTheme</property>
     <property name="iconFile">/templates/blank_report.gif</property>

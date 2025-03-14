@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.24" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.13.0.v202303021806</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.26" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.18.0.v202411161754</property>
     <property name="units">mm</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -874,6 +874,10 @@ order by CLASSICMODELS.ORDERDETAILS.ORDERLINENUMBER
                             </cell>
                             <cell id="40">
                                 <data id="48">
+                                    <structure name="dateTimeFormat">
+                                        <property name="category">Custom</property>
+                                        <property name="pattern">dd MMM yyyy</property>
+                                    </structure>
                                     <property name="resultSetColumn">DateFacture</property>
                                 </data>
                             </cell>
@@ -1006,13 +1010,13 @@ order by CLASSICMODELS.ORDERDETAILS.ORDERLINENUMBER
                         </list-property>
                         <property name="resultSetColumn">ADDRESSLINE2</property>
                     </data>
-                    <data id="57">
-                        <property name="style">adresse</property>
-                        <property name="resultSetColumn">CP+Ville</property>
-                    </data>
                     <data id="58">
                         <property name="style">adresse</property>
                         <property name="resultSetColumn">COUNTRY</property>
+                    </data>
+                    <data id="57">
+                        <property name="style">adresse</property>
+                        <property name="resultSetColumn">CP+Ville</property>
                     </data>
                 </cell>
             </row>

@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201805221921</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.26" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.18.0.v202411161754</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/first_report.gif</property>
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.firstreport</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="248"
- extends="SampleSource.Data Source">
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="DemoDS" id="395">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
             <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
             <property name="odaURL">jdbc:classicmodels:sampledb</property>
             <property name="odaUser">ClassicModels</property>
@@ -161,7 +170,7 @@
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">Data Source</property>
+            <property name="dataSource">DemoDS</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -477,6 +486,7 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                 </cell>
             </row>
         </grid>
+        <data id="397"/>
         <table id="250">
             <property name="masterPage">Simple MasterPage</property>
             <property name="pageBreakAfter">always</property>
@@ -623,6 +633,18 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                     <property name="dataType">string</property>
                     <property name="allowExport">true</property>
                 </structure>
+                <structure>
+                    <property name="name">GrandTotalCommandeEnvoyées</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["total"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
             </list-property>
             <structure name="toc"/>
             <list-property name="filter">
@@ -650,18 +672,18 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                             <property name="fontSize">14pt</property>
                             <property name="fontWeight">bold</property>
                             <property name="textAlign">right</property>
-                            <text-property name="text">Total toutes Commandes</text-property>
+                            <text-property name="text">Total toutes Commandes envoyées</text-property>
                         </label>
                     </cell>
                     <cell id="363">
-                        <data id="364">
+                        <data id="396">
                             <property name="fontSize">14pt</property>
                             <property name="fontWeight">bold</property>
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
                                 <property name="pattern">#,##0.00 €{RoundingMode=HALF_UP}</property>
                             </structure>
-                            <property name="resultSetColumn">GrandTotal</property>
+                            <property name="resultSetColumn">GrandTotalCommandeEnvoyées</property>
                         </data>
                     </cell>
                 </row>
@@ -904,9 +926,6 @@ order by CLASSICMODELS.CUSTOMERS.CUSTOMERNAME, CLASSICMODELS.ORDERS.ORDERNUMBER,
                             </structure>
                             <property name="textAlign">right</property>
                             <property name="resultSetColumn">GrandTotal</property>
-                        </data>
-                        <data id="373">
-                            <property name="resultSetColumn">GTC2</property>
                         </data>
                     </cell>
                 </row>

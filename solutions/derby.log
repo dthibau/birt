@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Mar 13 10:37:06 CET 2025:
+Amorçage de Derby (version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046)), instance a816c00e-0195-8edd-59d5-0000019e9ee0 
+dans le répertoire de base de données classpath:BirtSample en mode READ ONLY avec le chargeur de classe jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7. 
+Chargé de file:/home/dthibau/Formations/Birt/mywork/birt-runtime-4.19.0-202503120947/ReportEngine/lib/org.apache.derby_10.16.1.v20240802-0900.jar.
+java.vendor=BellSoft
+java.runtime.version=17.0.5+8-LTS
+user.dir=/home/dthibau/Formations/Birt/github/solutions
+os.name=Linux
+os.arch=amd64
+os.version=6.8.0-54-generic
+derby.system.home=null
+Chargeur de classe de la base de données démarré - derby.database.classpath = ''

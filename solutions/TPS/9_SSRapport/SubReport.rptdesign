@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.24" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.13.0.v202303021806</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.26" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.18.0.v202411161754</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -845,6 +845,12 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
                             <property name="marginBottom">20pt</property>
                             <property name="pageBreakBefore">avoid</property>
                             <property name="dataSet">PaiementsDUnClient</property>
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">all</property>
+                                    <expression name="valueExpr" type="javascript">!(row["Sum"] > 0)</expression>
+                                </structure>
+                            </list-property>
                             <list-property name="paramBindings">
                                 <structure>
                                     <property name="paramName">param_1</property>
@@ -892,8 +898,14 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
                                 </structure>
                                 <structure>
                                     <property name="name">Sum2</property>
-                                    <expression name="expression" type="javascript">row["Sum"] > 0 ? row["Sum"] : 0</expression>
-                                    <property name="dataType">float</property>
+                                    <expression name="expression" type="javascript">row.__rownum</expression>
+                                    <property name="dataType">integer</property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Zéro</property>
+                                    <expression name="expression" type="javascript">"0"</expression>
+                                    <property name="dataType">string</property>
                                     <property name="allowExport">true</property>
                                 </structure>
                             </list-property>
@@ -945,25 +957,20 @@ order by CLASSICMODELS.PAYMENTS.PAYMENTDATE desc]]></xml-property>
                             </detail>
                             <footer>
                                 <row id="94">
-                                    <cell id="96"/>
-                                    <cell id="97">
-                                        <label id="106">
-                                            <property name="fontWeight">bold</property>
-                                            <property name="textAlign">right</property>
-                                            <text-property name="text">Total</text-property>
-                                        </label>
-                                    </cell>
-                                    <cell id="98">
-                                        <data id="105">
-                                            <property name="fontWeight">bold</property>
-                                            <structure name="numberFormat">
-                                                <property name="category">Currency</property>
-                                                <property name="pattern">#,##0.00 €{RoundingMode=HALF_UP}</property>
-                                            </structure>
-                                            <property name="textAlign">right</property>
-                                            <property name="resultSetColumn">Sum</property>
+                                    <cell id="96">
+                                        <data id="107">
+                                            <property name="resultSetColumn">Sum2</property>
                                         </data>
                                     </cell>
+                                    <cell id="97">
+                                        <label id="109">
+                                            <text-property name="text">Total</text-property>
+                                        </label>
+                                        <data id="108">
+                                            <property name="resultSetColumn">Zéro</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="98"/>
                                 </row>
                             </footer>
                         </table>
